@@ -1,0 +1,135 @@
+.divPage {
+    background-color: slategray;
+    border-radius: 5px;
+    padding: 5px;
+}
+.divTitle {
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    padding-left: 10px;
+    padding-top: 1px;
+    padding-bottom: 10px;
+    background-color: rgb(37, 37, 33);
+    color: rgb(233, 215, 55);
+}
+.btn-style {
+    font-weight: bolder;
+    font-size: larger;
+    height: 50px;
+    width: 50px;
+}
+.btn-yeet {
+    margin-left: auto;
+}
+.btn-clear {
+    margin-top: 20px;
+    background-color: steelblue;
+    color:rgb(25, 35, 50);
+    width: 90%;
+}
+.btn-checkout {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(233, 215, 55);
+    color:rgb(25, 35, 50);
+    width: 90%;
+}
+.btn-continue {
+    margin-top: 20px;
+    background-color: steelblue;
+    color:rgb(25, 35, 50);
+    width: 90%;
+}
+.quantity {
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Lucida Grande', Geneva, Verdana, sans-serif;
+}
+div.signup-form {
+    margin: 20px;
+    padding: 20px;
+}
+div.receipt {
+    background-color: steelblue;
+    border: solid;
+    margin-top: 50px;
+    padding: 15px;
+    height: auto;
+}
+div.desc {
+    font-size: 110%;
+    font-family: 'Lucida Grande', Geneva, Verdana, sans-serif;
+}
+div.product {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid;
+    border-color: rgb(37, 37, 33);
+}
+div.item {
+    padding: 10px;
+}
+div.control {
+    float: right;
+    width: 40%;
+    padding: 10px;
+    border: solid;
+    min-height: 100px;
+    /*max-height: 100px;*/
+}
+img.item {
+    max-height: 100px;
+    min-height: 100px;
+    border-radius: 5px;
+    align-self: center;
+}
+body.theme {
+    background-color: rgb(25, 35, 50);
+    margin: 10px;
+}
+h3.theme {
+    font-family: 'Lucida Sans Regular', Geneva, Verdana, sans-serif;
+}
+h4.receipt {
+    font-family: 'Lucida Sans Regular', Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-decoration-line: underline;
+    margin-bottom: 25px;
+}
+h6.receipt {
+    font-family: 'Lucida Sans Regular', Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+}
+.receipt-header {
+    margin: 5px;
+    border-bottom: solid;
+    border-bottom-width: thin;
+    border-bottom-color:rgb(25, 35, 50);
+}
+.receipt-closer {
+    font-family: 'Lucida Sans Regular', Geneva, Verdana, sans-serif;
+    font-size: 90%;
+    padding-top: 10px;
+    font-weight: bold;
+    margin: 5px;
+    border-top: solid;
+    border-top-width: thin;
+    border-top-color:rgb(25, 35, 50);
+}
+div.receipt-item {
+    font-family: 'Lucida Sans Regular', Geneva, Verdana, sans-serif;
+    font-size: 90%;
+    padding-top: 5px;
+}
+a:link {color: rgb(233, 215, 55); text-decoration: none;}
+a:visited {color: rgb(233, 215, 55); text-decoration: none;}
+a:hover {color:rgb(137, 141, 124); text-decoration-line: underline;}
+a:active {text-decoration-color:  rgb(233, 215, 55);}
+a.color {
+    color: rgb(25, 35, 50);
+}
+a.color2 {
+    color: white;
+}

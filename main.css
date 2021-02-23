@@ -1,0 +1,71 @@
+
+.navbar{
+    background: yellow;
+    color:black;
+}
+
+h2 {
+    text-align: center;
+}
+
+.item  {
+	padding: 10px;
+	border: 3px solid gray;
+}
+
+.dropdown-menu{
+    background-color: white;
+    color: black;
+}
+
+.nav-link {
+    color:black;
+}
+
+.background{
+    background-color: black;
+}
+
+.navbar button{
+    border-color:black;
+}
+
+.navbar-collapse{
+    justify-content: flex-end;
+}
+
+
+a {
+    color: black;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom:0;
+    width: 100%;
+    background-color: yellow;
+    text-align:center;
+    color: black;
+}
+
+.banner{
+    padding-top: 90px;
+    border: 2px inset rgb(24, 22, 22);
+    width: auto;
+    height: 157px;
+    background-image: url("../images/store.png");
+}
+
+.logo-image img{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+    margin-right: 10px;
+    }
+
+.navbar-collapse{
+    justify-content: flex-end;
+}

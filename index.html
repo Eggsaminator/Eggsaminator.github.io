@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- font awesome icon library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  
+    <title>Main Page</title>
+
+
+<body class="background">
+    <nav class="navbar navbar-expand-md ">
+      <div class="logo-image">
+        <img src="images/logo.png" alt="logo">
+      </div>
+        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Aisles  
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="fruit_aisle.html">Fruits</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="vegetable_aisle.html">Vegetables</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="meat_aisle.html">Meat</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="other_aisle.html">Other</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="P4_cartPage.html">Checkout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="P5_loginPage.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="P6_signupPage.html">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+      <div class="jumbotron">
+        <header class="page-header container-fluid">
+          <div>
+            <h1>Welcome to our Grocery Store!</h1>
+          </div>
+        </header>
+      </div>
+      <div >
+        <p class="store-description" style="text-align: center;">Welcome to our store. We have a lot of products available right now. 3 stores currently open. Scroll Down to see our available hours.
+        </p>
+      </div>
+      <br>
+      
+      <div id="productsCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <img class="rounded w-100" src="images/Steak.jpg" alt="Steak">
+            <div class="carousel-caption">
+              <h3>Steak</h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class=" rounded w-100" src="images/Bacon.jpg" alt="bacon">
+            <div class="carousel-caption">
+              <h3>Bacon</h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="rounded w-100" src="images/Bok_Choy.jpg" alt="bok choy">
+            <div class="carousel-caption">
+              <h3>Bok Choy</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <table style="float:left" class="maintable table-striped">
+        <tr>
+          <th colspan="2" class="tb-header">Weekly Deals</th>
+        </tr>
+        <tr>
+          <td>Oranges</td>
+          <td>33% Off</td>
+        </tr>
+        <tr>
+          <td>Wine</td>
+          <td>15% Off</td>
+        </tr>
+        <tr>
+          <td>Beef</td>
+          <td>33% Off</td>
+        </tr>
+        <tr>
+          <td>Apples</td>
+          <td>50% Off</td>
+        </tr>
+        <tr>
+          <td>Alcohol</td>
+          <td>20% Off</i></td>
+        </tr>
+      </table>
+
+      <table style="float:right; " class="maintable table-striped">
+        <tr>
+          <th colspan="2" class="tb-header">Open Hours</th>
+        </tr>
+        <tr>
+          <td>Monday</td>
+          <td>9:00 am - 4:00 pm</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>9:00 am - 5:00 pm</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>9:00 am - 5:00 pm</td>
+        </tr>
+        <tr>
+          <td>Thursday</td>
+          <td>9:00 am - 5:00 pm</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>9:00 am - 9:00 pm</td>
+        </tr>
+        <tr>
+          <td>Saturday</td>
+          <td>9:00 am - 7:00 pm</td>
+        </tr>
+        <tr>
+          <td>Sunday</td>
+          <td>Closed</td>
+        </tr>
+      </table>
+        <footer class="footer">
+          <a href="#">
+            About us
+          </a>
+        </footer>
+</body>
+
+</html>
