@@ -4,86 +4,88 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 <script type="text/javascript"> document.addEventListener('click', function(e) { if(document.activeElement.toString() == '[object HTMLButtonElement]'){ document.activeElement.blur(); } }); </script>  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
 <link rel="stylesheet" type ="text/css" href="css/stylesheet.css"/>
-<head>
-    <title>List of orders</title>
-</head>
-<body>
+    <head>
+    </head>
+    <body class = "backstorepp">
+      <div class = "row content">
+      <div class = "container-fluid text-center">
+      <div class = "col-sm-2 text-center backendnav" style = "margin-top:1.5in; float:left">
+        <p><a href = "index.html">Home Page</a></p>
+        <p><a href = "ProductPage.html">Product List</a></p>
+        <p><a href = "UserList.html">User List</a></p>
+        <p><a href = "ordersList.html">Order List</a></p>
+      </div>
+      <div class = "col-sm-8 text-left" style = "float:left;">
+        <div class = "topdinc">
+            <h1 style = "margin-bottom:1.5cm;">Products List</h1>
+            <table class="table table-light pptable1">
+                <thead>
+                    <th class = "removeline">
+                        <button type="submit" class = "btn btn-outline-dark sbutton">Search</button>&emsp;<input type="text" placeholder=" Search for products" class = "rounded slabel">
+                    </th>
+                    <th class = "removeline">
+                      <a href = "EditAddItemsPage.html"><button type="submit" class = "btn btn-outline-dark sbutton" style = " float:right; width:160px;">Add items</button></a>
+                    </th>
+                    <th class = "removeline">
+                        <button type="submit" class = "btn btn-outline-dark sbutton" style = "float:right;">Delete selected items</button>
+                    </th>
+                </thead>
+            </table>
+            <table class="table table-light table-hover pptable1">
+                <tbody>
+                  <tr class = "antihover">
+                    <th class = "ppitemsh" style = "width:135px;"><input type="checkbox"></th>
+                    <th class = "ppitemsh" style = "width:200px;"></th>
+                    <th class = "ppitemsh" style = "width:200px">ID</th>
+                    <th class = "ppitemsh" style = "width:200px">Quantity</th>
+                    <th class = "ppitemsh" style = "width:200px">Date Ordered</th>
+                    <th class = "ppitemsh" style = "width:165px">Date recieved</th>
+                    <th class = "ppitemsh" style = "width:165px;"></th>
+                  </tr>
+                  <tr>
+                    <td class ="ppitems"><input type="checkbox"></td>
+                    <td class ="ppitems"><img class = "pimage" src="images/applesm.jpg"></td>
+                    <td class ="ppitems">3</td>
+                    <td class ="ppitems">1337</td>
+                    <td class ="ppitems">19/01/2005</td>
+                    <td class ="ppitems">21/05/2011</td>
+                    <td class ="ppitems"><a href = "editOrder.html">Edit</a></td>
+                  </tr>
+                  <tr>
+                    <td class ="ppitems"><input type="checkbox"></td>
+                    <td class ="ppitems"><img class = "pimage" src="images/Orangesm.jpg"></td>
+                    <td class ="ppitems">1</td>
+                    <td class ="ppitems">895</td>
+                    <td class ="ppitems">19/01/2015</td>
+                    <td class ="ppitems">21/05/2012</td>
+                    <td class ="ppitems"><a href = "editOrder.html">Edit</a></td>
+                  </tr>
+                  <tr>
+                    <td class ="ppitems"><input type="checkbox"></td>
+                    <td class ="ppitems"><img class = "pimage" src="images/beefsm.jpg"></td>
+                    <td class ="ppitems">9</td>
+                    <td class ="ppitems">1337</td>
+                    <td class ="ppitems">19/12/2019</td>
+                    <td class ="ppitems">18/01/2020</td>
+                    <td class ="ppitems"><a href = "editOrder.html">Edit</a></td>
+                  </tr>
+                  <tr>
+                    <td class ="ppitems"><input type="checkbox"></td>
+                    <td class ="ppitems"><img class = "pimage" src="images/coronasm.jpg"></td>
+                    <td class ="ppitems">13</td>
+                    <td class ="ppitems">1337</td>
+                    <td class ="ppitems">19/01/2015</td>
+                    <td class ="ppitems">20/01/2011</td>
+                    <td class ="ppitems"><a href = "editOrder.html">Edit</a></td>
+                  </tr>
 
-    <div class="container-fluid">
-        <h1>List of orders</h1>
-        <div class="row">
-            <div class="col-sm-1"><button type="submit" class = "btn btn-outline-dark sbutton">Search</button></div>
-            <div class="col-sm-2"><input class = "profiletextinputs" type="text" placeholder="Search by ID"></div>
-            <div class="col-sm-4"></div>
-            <div class="col-sm-2"><a href="newOrder.html"><button type="submit" class = "btn btn-outline-dark sbutton">Pass a new order</button></a></div>
-            <div class="col-sm-2"><button type="submit" class = "btn btn-outline-dark sbutton">cancle/clear orders</button></div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-sm-1"><strong>selection </strong></div>
-            <div class="col-sm-2"><strong>image</strong></div>
-            <div class="col-sm-1"><strong>ID</strong></div>
-            <div class="col-sm-1"><strong>Quantity</strong></div>
-            <div class="col-sm-2"><strong>Status</strong></div>
-            <div class="col-sm-2"><strong>Date ordered</strong></div>
-            <div class="col-sm-2"><strong>Date recieved</strong></div>
-            <div class="col-sm-1"></div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-sm-1"><input type="checkbox"></div>
-            <div class="col-sm-2"><img width="100%" src="images/apple-product.jpg"></strong></div>
-            <div class="col-sm-1">3</div>
-            <div class="col-sm-1">1337</div>
-            <div class="col-sm-2">Recieved</div>
-            <div class="col-sm-2">19/01/2005</div>
-            <div class="col-sm-2">21/05/2011</div>
-            <div class="col-sm-1"><a href="editOrder.html">edit</a></div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-sm-1"><input type="checkbox"></div>
-            <div class="col-sm-2"><img width="100%" src="images/orange-product.jpg"></strong></div>
-            <div class="col-sm-1">1</div>
-            <div class="col-sm-1">895</div>
-            <div class="col-sm-2">Recieved</div>
-            <div class="col-sm-2">19/01/2015</div>
-            <div class="col-sm-2">21/05/2012</div>
-            <div class="col-sm-1"><a href="editOrder.html">edit</a></div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-sm-1"><input type="checkbox"></div>
-            <div class="col-sm-2"><img width="100%" src="images/beef-product.jpg"></strong></div>
-            <div class="col-sm-1">3</div>
-            <div class="col-sm-1">1337</div>
-            <div class="col-sm-2">Recieved</div>
-            <div class="col-sm-2">19/01/2005</div>
-            <div class="col-sm-2">21/05/2011</div>
-            <div class="col-sm-1"><a href="editOrder.html">edit</a></div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-sm-1"><input type="checkbox"></div>
-            <div class="col-sm-2"><img width="100%" src="images/corona-product.jpg"></strong></div>
-            <div class="col-sm-1">3</div>
-            <div class="col-sm-1">1337</div>
-            <div class="col-sm-2">Recieved</div>
-            <div class="col-sm-2">19/01/2005</div>
-            <div class="col-sm-2">21/05/2011</div>
-            <div class="col-sm-1"><a href="editOrder.html">edit</a></div>
-        </div>
-        
-
-        
-    </div>
-</body>
-</html>
+                </tbody>
+              </table>
+              </div>
+            </div>
+    </body>
