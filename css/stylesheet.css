@@ -292,7 +292,44 @@
 @media
     only screen and (max-width: 760px) {
 
-        #Tables,  #Tables tbody, #Tables td,  #Tables tr { 
+        #Tables1,  #Tables1 tbody, #Tables1 td,  #Tables1 tr { 
+            display: block; 
+        }
+
+        #Tables1 tr { border: 1px solid lightgray; }
+
+        #Tables1 td:before { 
+            left: 7px;
+            padding-right: 10px; 
+        }
+      #Tables1 td:nth-of-type(3):before { content: "Product"; font-weight: bold;}
+        #Tables1 td:nth-of-type(4):before { content: "ID"; font-weight: bold;}
+        #Tables1 td:nth-of-type(5):before { content: "Price"; font-weight: bold;}
+        #Tables1 td:nth-of-type(6):before { content: "Inventory"; font-weight: bold;}
+        #Tables1 td:nth-of-type(7):before { content: ""; font-weight: bold;}
+}
+@media
+    only screen and (max-width: 760px) {
+
+        #Tables2,  #Tables tbody, #Tables td,  #Tables tr { 
+            display: block; 
+        }
+
+        #productHead tr { 
+            display:none;
+        }
+
+        #Tables tr { border: 1px solid lightgray; }
+
+        #Tables td:before { 
+            left: 7px;
+            padding-right: 10px; 
+        }
+}
+@media
+    only screen and (max-width: 760px) {
+
+        #Tables3,  #Tables tbody, #Tables td,  #Tables tr { 
             display: block; 
         }
 
