@@ -289,3 +289,21 @@
   width: 60%;
   text-align:center;
 }
+@media
+    only screen and (max-width: 760px) {
+
+        #Tables,  #Tables tbody, #Tables td,  #Tables tr { 
+            display: block; 
+        }
+
+        #productHead tr { 
+            display:none;
+        }
+
+        #Tables tr { border: 1px solid lightgray; }
+
+        #Tables td:before { 
+            left: 7px;
+            padding-right: 10px; 
+        }
+    }
