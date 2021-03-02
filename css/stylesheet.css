@@ -292,6 +292,20 @@
 @media
     only screen and (max-width: 760px) {
 
+        #Tables,  #Tables tbody, #Tables td,  #Tables tr { 
+            display: block; 
+        }
+
+        #Tables tr { border: 1px solid lightgray; }
+
+        #Tables td:before { 
+            left: 7px;
+            padding-right: 10px; 
+        }
+}
+@media
+    only screen and (max-width: 760px) {
+
         #Tables1,  #Tables1 tbody, #Tables1 td,  #Tables1 tr { 
             display: block; 
         }
