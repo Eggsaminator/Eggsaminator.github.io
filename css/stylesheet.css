@@ -316,6 +316,9 @@
             left: 7px;
             padding-right: 10px; 
         }
+      #Tables1H tr { 
+            display:none;
+        }
       #Tables1 td:nth-of-type(3):before { content: "Product"; font-weight: bold;}
         #Tables1 td:nth-of-type(4):before { content: "ID"; font-weight: bold;}
         #Tables1 td:nth-of-type(5):before { content: "Price"; font-weight: bold;}
