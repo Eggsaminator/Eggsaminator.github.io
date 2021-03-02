@@ -328,20 +328,25 @@
 @media
     only screen and (max-width: 760px) {
 
-        #Tables2,  #Tables tbody, #Tables td,  #Tables tr { 
+        #Tables2,  #Tables2 tbody, #Tables2 td,  #Tables2 tr { 
             display: block; 
         }
 
-        #productHead tr { 
+        #Tables2H tr { 
             display:none;
         }
 
-        #Tables tr { border: 1px solid lightgray; }
+        #Tables2 tr { border: 1px solid lightgray; }
 
-        #Tables td:before { 
+        #Tables2 td:before { 
             left: 7px;
             padding-right: 10px; 
         }
+      #Tables2 td:nth-of-type(3):before { content: "Product"; font-weight: bold;}
+        #Tables2 td:nth-of-type(4):before { content: "ID"; font-weight: bold;}
+        #Tables2 td:nth-of-type(5):before { content: "Price"; font-weight: bold;}
+        #Tables2 td:nth-of-type(6):before { content: "Inventory"; font-weight: bold;}
+        #Tables2 td:nth-of-type(7):before { content: ""; font-weight: bold;}
 }
 @media
     only screen and (max-width: 760px) {
