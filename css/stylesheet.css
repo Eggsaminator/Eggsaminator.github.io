@@ -342,11 +342,11 @@
             left: 7px;
             padding-right: 10px; 
         }
-      #Tables2 td:nth-of-type(3):before { content: "Product"; font-weight: bold;}
-        #Tables2 td:nth-of-type(4):before { content: "ID"; font-weight: bold;}
-        #Tables2 td:nth-of-type(5):before { content: "Price"; font-weight: bold;}
-        #Tables2 td:nth-of-type(6):before { content: "Inventory"; font-weight: bold;}
-        #Tables2 td:nth-of-type(7):before { content: ""; font-weight: bold;}
+      #Tables2 td:nth-of-type(2):before { content: "Username"; font-weight: bold;}
+        #Tables2 td:nth-of-type(3):before { content: "Email"; font-weight: bold;}
+        #Tables2 td:nth-of-type(4):before { content: ""; font-weight: bold;}
+        #Tables2 td:nth-of-type(5):before { content: ""; font-weight: bold;}
+        #Tables2 td:nth-of-type(6):before { content: ""; font-weight: bold;}
 }
 @media
     only screen and (max-width: 760px) {
