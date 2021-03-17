@@ -1,191 +1,198 @@
-<!DOCTYPE html>
-<html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script type="text/javascript"> document.addEventListener('click', function(e) { if(document.activeElement.toString() == '[object HTMLButtonElement]'){ document.activeElement.blur(); } }); </script>  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type ="text/css" href="css/stylesheet.css"/>
-    <head>
-    </head>
-    <body >
-      <div class = "row content">
-      <div class = "container-fluid text-center">
-      <div class = "col-sm-2 text-center backendnav" style = "margin-top:1.5in; float:left">
-        <p><a href = "index.html">Home Page</a></p>
-        <p><a href = "ProductPage.html">Product List</a></p>
-        <p><a href = "UserList.html">User List</a></p>
-        <p><a href = "ordersList.html">Order List</a></p>
-      </div>
-      <div class = "col-sm-8 text-left" style = "float:left;">
-        <div class = "topdinc">
-            <h1 style = "margin-bottom:1.5cm;">Products List</h1>
-            <table id="Tables1"class="table table-light pptable1">
-                <thead>
-                    <th class = "removeline">
-                        <button type="submit" class = "btn btn-outline-dark sbutton">Search</button>&emsp;<input type="text" placeholder=" Search for products" class = "rounded slabel">
-                    </th>
-                    <th class = "removeline">
-                      <a href = "EditAddItemsPage.html"><button type="submit" class = "btn btn-outline-dark sbutton" style = " float:right; width:160px;">Add items</button></a>
-                    </th>
-                    <th class = "removeline">
-                        <button type="submit" class = "btn btn-outline-dark sbutton" style = "float:right;">Delete</button>
-                    </th>
-                </thead>
-            </table>
-            <table id="Tables1" class="table table-light table-hover pptable1">
-                <thead id = "Tables1H">
-                  <tr class = "antihover">
-                    <th class = "ppitemsh" style = "width:135px;"><input type="checkbox"></th>
-                    <th class = "ppitemsh" style = "width:200px;"></th>
-                    <th class = "ppitemsh" style = "width:200px">Product</th>
-                    <th class = "ppitemsh" style = "width:200px">ID</th>
-                    <th class = "ppitemsh" style = "width:200px">Price</th>
-                    <th class = "ppitemsh" style = "width:165px">Inventory</th>
-                    <th class = "ppitemsh" style = "width:165px;"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
-                    <td class ="ppitems"><img class = "pimage" src="images/orange-product.jpg"></td>
-                    <td class ="ppitems">Orange</td>
-                    <td class ="ppitems">1</td>
-                    <td class ="ppitems">$1.99</td>
-                    <td class ="ppitems">257</td>
-                    <td class ="ppitems"><a href = "EditPage.html">Edit</a></td>
-                  </tr>
-                  <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
-                    <td class ="ppitems"><img class = "pimage" src="images/kiwi-product.jpg"></td>
-                    <td class ="ppitems">Kiwi</td>
-                    <td class ="ppitems">2</td>
-                    <td class ="ppitems">$2.99</td>
-                    <td class ="ppitems">149</td>
-                    <td class ="ppitems"><a href = "EditPage.html">Edit</a></td>
-                  </tr>
-                  <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
-                    <td class ="ppitems"><img class = "pimage" src="images/apple-product.jpg"></td>
-                    <td class ="ppitems">Apple</td>
-                    <td class ="ppitems">3</td>
-                    <td class ="ppitems">$0.75</td>
-                    <td class ="ppitems">320</td>
-                    <td class ="ppitems"><a href = "EditPage.html">Edit</a></td>
-                  </tr>
-                  <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
-                    <td class ="ppitems"><img class = "pimage" src="images/banana-product.jpg"></td>
-                    <td class ="ppitems">Banana</td>
-                    <td class ="ppitems">4</td>
-                    <td class ="ppitems">$0.99</td>
-                    <td class ="ppitems">189</td>
-                    <td class ="ppitems"><a href = "EditPage.html">Edit</a></td>
-                  </tr>
-                  <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
-                    <td class ="ppitems"><img class = "pimage" src="images/bok_choy-product.jpg"></td>
-                    <td class ="ppitems">Bok Choy</td>
-                    <td class ="ppitems">5</td>
-                    <td class ="ppitems">$1.99</td>
-                    <td class ="ppitems">259</td>
-                    <td class ="ppitems"><a href = "EditPage.html">Edit</a></td>
-                  </tr>
-                  <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
-                    <td class ="ppitems"><img class = "pimage" src="images/broccoli-product.jpg"></td>
-                    <td class ="ppitems">Broccoli</td>
-                    <td class ="ppitems">6</td>
-                    <td class ="ppitems">$1.99</td>
-                    <td class ="ppitems">252</td>
-                    <td class ="ppitems"><a href = "EditPage.html">Edit</a></td>
-                  </tr>
-                  <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
-                    <td class ="ppitems"><img class = "pimage" src="images/tomato-product.jpg"></td>
-                    <td class ="ppitems">Tomato</td>
-                    <td class ="ppitems">7</td>
-                    <td class ="ppitems">$1.99</td>
-                    <td class ="ppitems">154</td>
-                    <td class ="ppitems"><a href = "EditPage.html">Edit</a></td>
-                  </tr>
-                  <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
-                    <td class ="ppitems"><img class = "pimage" src="images/carrot-product.jpg"></td>
-                    <td class ="ppitems">Carrot</td>
-                    <td class ="ppitems">8</td>
-                    <td class ="ppitems">$1.99</td>
-                    <td class ="ppitems">345</td>
-                    <td class ="ppitems"><a href = "EditPage.html">Edit</a></td>
-                  </tr>
-                  <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
-                    <td class ="ppitems"><img class = "pimage" src="images/Steak.jpg"></td>
-                    <td class ="ppitems">Beef</td>
-                    <td class ="ppitems">9</td>
-                    <td class ="ppitems">$7.99</td>
-                    <td class ="ppitems">213</td>
-                    <td class ="ppitems"><a href = "EditPage.html">Edit</a></td>
-                  </tr>
-                  <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
-                    <td class ="ppitems"><img class = "pimage" src="images/pork-product.jpg"></td>
-                    <td class ="ppitems">Pork</td>
-                    <td class ="ppitems">10</td>
-                    <td class ="ppitems">$7.99</td>
-                    <td class ="ppitems">248</td>
-                    <td class ="ppitems"><a href = "EditPage.html">Edit</a></td>
-                  </tr>
-                  <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
-                    <td class ="ppitems"><img class = "pimage" src="images/chicken-product.jpg"></td>
-                    <td class ="ppitems">Chicken</td>
-                    <td class ="ppitems">11</td>
-                    <td class ="ppitems">$5.99</td>
-                    <td class ="ppitems">242</td>
-                    <td class ="ppitems"><a href = "EditPage.html">Edit</a></td>
-                  </tr>
-                  <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
-                    <td class ="ppitems"><img class = "pimage" src="images/scotch-product.jpg"></td>
-                    <td class ="ppitems">Scotch</td>
-                    <td class ="ppitems">12</td>
-                    <td class ="ppitems">$12.99</td>
-                    <td class ="ppitems">248</td>
-                    <td class ="ppitems"><a href = "EditPage.html">Edit</a></td>
-                  </tr>
-                  <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
-                    <td class ="ppitems"><img class = "pimage" src="images/corona-product.jpg"></td>
-                    <td class ="ppitems">Corona</td>
-                    <td class ="ppitems">13</td>
-                    <td class ="ppitems">$9.99</td>
-                    <td class ="ppitems">249</td>
-                    <td class ="ppitems"><a href = "EditPage.html">Edit</a></td>
-                  </tr>
-                  <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
-                    <td class ="ppitems"><img class = "pimage" src="images/wine-product.jpg"></td>
-                    <td class ="ppitems">Red Wine, Bordeaux</td>
-                    <td class ="ppitems">14</td>
-                    <td class ="ppitems">$24.99</td>
-                    <td class ="ppitems">233</td>
-                    <td class ="ppitems"><a href = "EditPage.html">Edit</a></td>
-                  </tr>
-                  <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
-                    <td class ="ppitems"><img class = "pimage" src="images/champagne-product.jpg"></td>
-                    <td class ="ppitems">Champagne</td>
-                    <td class ="ppitems">15</td>
-                    <td class ="ppitems">$35.99</td>
-                    <td class ="ppitems">228</td>
-                    <td class ="ppitems"><a href = "EditPage.html">Edit</a></td>
-                  </tr>
-                </tbody>
-              </table>
-              </div>
-            </div>
-    </body>
+<html lang="en"><head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript"> document.addEventListener('click', function(e) { if(document.activeElement.toString() == '[object HTMLButtonElement]'){ document.activeElement.blur(); } }); </script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        
+        </head>
+        <body class = "">
+          <div class="row content">
+          <div class="container-fluid text-center">
+          <div class="col-sm-2 text-center backendnav" style="margin-top:1.5in; float:left">
+            <p><a href="index.html">Home Page</a></p>
+            <p><a href="ProductPage.html">Product List</a></p>
+            <p><a href="UserList.html">User List</a></p>
+            <p><a href="ordersList.html">Order List</a></p>
+          </div>
+          <div class="col-sm-8 text-left" style="float:left;">
+            <div class="topdinc">
+                <h1 style="margin-bottom:1.5cm;">Products List</h1>
+                <table id="Tables1" class="table table-light pptable1">
+                    <thead>
+                        <tr><th class="removeline">
+                            <button type="submit" class="btn btn-outline-dark sbutton">Search</button>&emsp;<input type="text" placeholder=" Search for products" class="rounded slabel">
+                        </th>
+                        <th class="removeline">
+                          <a href = "#footer"><button type="submit" class="btn btn-outline-dark sbutton" style=" float:right; width:160px;" onclick = "addProduct()">Add items</button></a>
+                        </th>
+                        <th class="removeline">
+                            <button type="submit" class="btn btn-outline-dark sbutton mr-3" onclick = "devareItem()">Delete</button>
+                            <a href = "EditAddItemsPage.html"><button type="submit" class="btn btn-outline-dark sbutton">Add/Edit</button></a>
+                        </th>
+                    </tr></thead>
+                </table>
+                <table id="Tables1" class="table table-light table-hover pptable1">
+                    <thead id="Tables1H">
+                      <tr class="antihover">
+                        <th class="ppitemsh" style="width:135px;"><input type="checkbox"></th>
+                        <th class="ppitemsh" style="width:200px;"></th>
+                        <th class="ppitemsh" style="width:200px">Product</th>
+                        <th class="ppitemsh" style="width:200px">ID</th>
+                        <th class="ppitemsh" style="width:200px">Price</th>
+                        <th class="ppitemsh" style="width:165px">Inventory</th>
+                        <th class="ppitemsh" style="width:165px;"></th>
+                      </tr>
+                    </thead>
+                    <tbody id = "thebody">
+                      <tr>
+                        <td class="ppitems"><input type="checkbox" name = "checkb"></td>
+                        <td class="ppitems"><img class="pimage" src="images/orange-product.jpg"></td>
+                        <td class="ppitems">Orange</td>
+                        <td class="ppitems">1</td>
+                        <td class="ppitems">$1.99</td>
+                        <td class="ppitems">257</td>
+                        <td class="ppitems"><button type = "submit" onclick = "becomeEditable(this)" class="btn btn-outline-dark sbutton">Edit</button></td>
+                      </tr>
+                      <tr>
+                        <td class="ppitems"><input type="checkbox" name = "checkb"></td>
+                        <td class="ppitems"><img class="pimage" src="images/kiwi-product.jpg"></td>
+                        <td class="ppitems">Kiwi</td>
+                        <td class="ppitems">2</td>
+                        <td class="ppitems">$2.99</td>
+                        <td class="ppitems">149</td>
+                        <td class="ppitems"><button type = "submit" onclick = "becomeEditable(this)" class="btn btn-outline-dark sbutton">Edit</button></td>
+                      </tr>
+                      <tr>
+                        <td class="ppitems"><input type="checkbox" name = "checkb"></td>
+                        <td class="ppitems"><img class="pimage" src="images/apple-product.jpg"></td>
+                        <td class="ppitems">Apple</td>
+                        <td class="ppitems">3</td>
+                        <td class="ppitems">$0.75</td>
+                        <td class="ppitems">320</td>
+                        <td class="ppitems"><button type = "submit" onclick = "becomeEditable(this)" class="btn btn-outline-dark sbutton">Edit</button></td>
+                      </tr>
+                      <tr>
+                        <td class="ppitems"><input type="checkbox" name = "checkb"></td>
+                        <td class="ppitems"><img class="pimage" src="images/banana-product.jpg"></td>
+                        <td class="ppitems">Banana</td>
+                        <td class="ppitems">4</td>
+                        <td class="ppitems">$0.99</td>
+                        <td class="ppitems">189</td>
+                        <td class="ppitems"><button type = "submit" onclick = "becomeEditable(this)" class="btn btn-outline-dark sbutton">Edit</button></td>
+                      </tr>
+                      <tr>
+                        <td class="ppitems"><input type="checkbox" name = "checkb"></td>
+                        <td class="ppitems"><img class="pimage" src="images/bok_choy-product.jpg"></td>
+                        <td class="ppitems">Bok Choy</td>
+                        <td class="ppitems">5</td>
+                        <td class="ppitems">$1.99</td>
+                        <td class="ppitems">259</td>
+                        <td class="ppitems"><button type = "submit" onclick = "becomeEditable(this)" class="btn btn-outline-dark sbutton">Edit</button></td>
+                      </tr>
+                      <tr>
+                        <td class="ppitems"><input type="checkbox" name = "checkb"></td>
+                        <td class="ppitems"><img class="pimage" src="images/broccoli-product.jpg"></td>
+                        <td class="ppitems">Broccoli</td>
+                        <td class="ppitems">6</td>
+                        <td class="ppitems">$1.99</td>
+                        <td class="ppitems">252</td>
+                        <td class="ppitems"><button type = "submit" onclick = "becomeEditable(this)" class="btn btn-outline-dark sbutton">Edit</button></td>
+                      </tr>
+                      <tr>
+                        <td class="ppitems"><input type="checkbox" name = "checkb"></td>
+                        <td class="ppitems"><img class="pimage" src="images/tomato-product.jpg"></td>
+                        <td class="ppitems">Tomato</td>
+                        <td class="ppitems">7</td>
+                        <td class="ppitems">$1.99</td>
+                        <td class="ppitems">154</td>
+                        <td class="ppitems"><button type = "submit" onclick = "becomeEditable(this)" class="btn btn-outline-dark sbutton">Edit</button></td>
+                      </tr>
+                      <tr>
+                        <td class="ppitems"><input type="checkbox" name = "checkb"></td>
+                        <td class="ppitems"><img class="pimage" src="images/carrot-product.jpg"></td>
+                        <td class="ppitems">Carrot</td>
+                        <td class="ppitems">8</td>
+                        <td class="ppitems">$1.99</td>
+                        <td class="ppitems">345</td>
+                        <td class="ppitems"><button type = "submit" onclick = "becomeEditable(this)" class="btn btn-outline-dark sbutton">Edit</button></td>
+                      </tr>
+                      <tr>
+                        <td class="ppitems"><input type="checkbox" name = "checkb"></td>
+                        <td class="ppitems"><img class="pimage" src="images/Steak.jpg"></td>
+                        <td class="ppitems">Beef</td>
+                        <td class="ppitems">9</td>
+                        <td class="ppitems">$7.99</td>
+                        <td class="ppitems">213</td>
+                        <td class="ppitems"><button type = "submit" onclick = "becomeEditable(this)" class="btn btn-outline-dark sbutton">Edit</button></td>
+                      </tr>
+                      <tr>
+                        <td class="ppitems"><input type="checkbox" name = "checkb"></td>
+                        <td class="ppitems"><img class="pimage" src="images/pork-product.jpg"></td>
+                        <td class="ppitems">Pork</td>
+                        <td class="ppitems">10</td>
+                        <td class="ppitems">$7.99</td>
+                        <td class="ppitems">248</td>
+                        <td class="ppitems"><button type = "submit" onclick = "becomeEditable(this)" class="btn btn-outline-dark sbutton">Edit</button></td>
+                      </tr>
+                      <tr>
+                        <td class="ppitems"><input type="checkbox" name = "checkb"></td>
+                        <td class="ppitems"><img class="pimage" src="images/chicken-product.jpg"></td>
+                        <td class="ppitems">Chicken</td>
+                        <td class="ppitems">11</td>
+                        <td class="ppitems">$5.99</td>
+                        <td class="ppitems">242</td>
+                        <td class="ppitems"><button type = "submit" onclick = "becomeEditable(this)" class="btn btn-outline-dark sbutton">Edit</button></td>
+                      </tr>
+                      <tr>
+                        <td class="ppitems"><input type="checkbox" name = "checkb"></td>
+                        <td class="ppitems"><img class="pimage" src="images/scotch-product.jpg"></td>
+                        <td class="ppitems">Scotch</td>
+                        <td class="ppitems">12</td>
+                        <td class="ppitems">$12.99</td>
+                        <td class="ppitems">248</td>
+                        <td class="ppitems"><button type = "submit" onclick = "becomeEditable(this)" class="btn btn-outline-dark sbutton">Edit</button></td>
+                      </tr>
+                      <tr>
+                        <td class="ppitems"><input type="checkbox" name = "checkb"></td>
+                        <td class="ppitems"><img class="pimage" src="images/corona-product.jpg"></td>
+                        <td class="ppitems">Corona</td>
+                        <td class="ppitems">13</td>
+                        <td class="ppitems">$9.99</td>
+                        <td class="ppitems">249</td>
+                        <td class="ppitems"><button type = "submit" onclick = "becomeEditable(this)" class="btn btn-outline-dark sbutton">Edit</button></td>
+                      </tr>
+                      <tr>
+                        <td class="ppitems"><input type="checkbox" name = "checkb"></td>
+                        <td class="ppitems"><img class="pimage" src="images/wine-product.jpg"></td>
+                        <td class="ppitems">Red Wine, Bordeaux</td>
+                        <td class="ppitems">14</td>
+                        <td class="ppitems">$24.99</td>
+                        <td class="ppitems">233</td>
+                        <td class="ppitems"><button type = "submit" onclick = "becomeEditable(this)" class="btn btn-outline-dark sbutton">Edit</button></td>
+                      </tr>
+                      <tr>
+                        <td class="ppitems"><input type="checkbox" name = "checkb"></td>
+                        <td class="ppitems"><img class="pimage" src="images/champagne-product.jpg"></td>
+                        <td class="ppitems">Champagne</td>
+                        <td class="ppitems">15</td>
+                        <td class="ppitems">$35.99</td>
+                        <td class="ppitems">228</td>
+                        <td class="ppitems"><button type = "submit" onclick = "becomeEditable(this)" class="btn btn-outline-dark sbutton">Edit</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                </div>
+        <script src = "backend.js"></script>
+        <script type = "text/javascript">
+          if(localStorage.getItem("name") != null){
+          addProductPagef();  
+          }
+          </script>
+    </div></div>
+    <footer id = "footer"></footer>
+    </body></html>
