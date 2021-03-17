@@ -8,45 +8,41 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type ="text/css" href="css/stylesheet.css"/>
+<link rel="stylesheet" type ="text/css" href="stylesheet.css"/>
 <head>
 </head>
-<body class = "backstoreeditpage">
-    <div class = "addcontainer">
-        <a href = "ProductPage.html"><button type="submit" class = "btn btn-outline-dark sbuttonreturn"><i class = "fa fa-arrow-left"></i></button></a>
-        <h1 class = "productpageh1">Add Product</h1>
+<body class="">
+    <div class="row content">
+    <div class="container-fluid text-center">
+    <div class="col-sm-2 text-center backendnav" style="margin-top:1.5in; float:left">
+      <p><a href="index.html">Home Page</a></p>
+      <p><a href="ProductPage.html">Product List</a></p>
+      <p><a href="UserList.html">User List</a></p>
+      <p><a href="ordersList.html">Order List</a></p>
     </div>
-    <div class = "productdescription">
-        <br>&emsp;&emsp;
-        <label>Product Name :  </label>
-        <input class = "rounded slabel2" type = "text" placeholder = " Orange">
-        <label style = "margin-left:100px;">Product ID :</label>
-        <input class = "rounded slabel3" type = "text" placeholder = " #1">
-        <br><br><br>
-        &emsp;&emsp;
-        <label>Product Price :  </label>
-        <input class = "rounded slabel2" style = "width:10%" type = "text" placeholder = " $0.99">
-        <label style = "margin-left:190px;">Inventory Quantity :</label>
-        <input class = "rounded slabel3" type = "text" placeholder = " 0">
-        <br><br><br>
-        <label class = "edlabel">Product Description : </label>
-        <div class = "addpdes" style = "border:none;">
-        <textarea class = "addpdes" style = "width:100%"></textarea>
-        </div>
-        </div>
+    <div class="col-sm-7 text-center mt-5" style="float:left;">
+      <div class = "row-6-md" style = "margin-top:3cm; min-width: 20%;">
+          <h1 style="margin-bottom:1.5cm;">Add Product</h1>
+          <table class="table table-light" id = "productTable1">
+              <tbody>
+                <td class="ppitems"><img class="pimage" src=""></td>
+                <td class="ppitems"><input type = "text" name = "addeditpagetext" placeholder = "Product Name" style = "width:70%;"></td>
+                <td class="ppitems"><input type = "text" name = "addeditpagetext" placeholder = "Product ID" style = "width:70%;"></td>
+                <td class="ppitems"><input type = "text" name = "addeditpagetext" placeholder = "Product Price" style = "width:70%;"></td>
+                <td class="ppitems"><input type = "text" name = "addeditpagetext" placeholder = "Product Quantity" style = "width:70%;"></td>
+              </tr></tbody>
+          </table>
     </div>
     <br><br>
-    <div class = "productdescription" style = "height:348px">
-        <div style = "width:100%;">
+    <div class="col-sm-7 text-center mt-5 m-auto">
         <label class = "edlabelforimg"><b>Product Image : </b></label>
-        <div class = "addpimg">
-            <button class = "btn btn-outline-dark sbutton">Add File</button>
+        <div class = "justify-content-center align-items-center" style = "border: 2px dashed grey; border-radius: 5px; max-width: 100%;">
+            <img id = "imageadder" style = "position:relative; z-index: 1; max-width:100%; max-height:100%; object-fit:contain">
+                <input type="file" id="myFile" onchange = loadSrc(this)>
         </div>
         </div>
-    <div class = "addcontainer" style = "top:70px;">
-        <div style = "width:120%; display:flex; justify-content: flex-end;">
-            <a href = "ProductPage.html"><button class = "btn btn-outline-dark sbutton" style = "width:130%">Save</button></a>
-        </div>
+            <button type="submit" class="btn btn-outline-dark sbutton mt-5" onclick = "savePage()" style=" float:right;">Save</button>
     </div>
     </div>
+    <script src = "backend.js"></script>
 </body>
