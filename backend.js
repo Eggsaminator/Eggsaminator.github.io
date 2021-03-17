@@ -1,4 +1,3 @@
-//Will verify all checked rows and delete them
 function devareItem(){
     var checkboxes = document.getElementsByName("checkb");
     for(var i = 0; i < checkboxes.length; i++){
@@ -12,7 +11,6 @@ function devareItem(){
 function loadSrc(event){
     document.getElementsByClassName("pimage")[0].src = URL.createObjectURL(event.files[0]);
   }
-//This function will transform an editable row to a concrete one
 function addProductFinal(target1){
   var oldimage = document.getElementById("imgfile");
   var newcheckbox = document.createElement("input");
@@ -47,7 +45,6 @@ function addProductFinal(target1){
   rowtb.cells[6].appendChild(neweditb);
   neweditb.setAttribute( "onClick", "javascript: becomeEditable(this);" );
 }
-//Will make a row editable
 function becomeEditable(targetf){
   var target = targetf.parentElement.parentElement;
   var inputimage = document.createElement("input");
@@ -108,7 +105,6 @@ function becomeEditable(targetf){
     target.cells[4].appendChild(productprice);
     target.cells[5].appendChild(productqty);
     savebutton.onclick = function (){
-      //Makes sure that all values inside the text fields and images are valid after saving the edited row
       if(document.getElementById('imgfile').files.length == 0){
         alert("Invalid Image");
       }
@@ -129,7 +125,6 @@ function becomeEditable(targetf){
       }
     }
   }
-  //This function will initialize a template row and then use the becomeEditable() function on the row to allow adding products
   function addProduct(){
     var tablebody = document.getElementById("thebody");
     var newrow = document.createElement("tr");
@@ -159,7 +154,6 @@ function becomeEditable(targetf){
     }
     becomeEditable(buttoncol1);
   }
-  //Will make sure all inputs in the Add product page are valid and store those values
   function savePage(){
       if(document.getElementById('myFile').files.length == 0){
         alert("Invalid Image");
@@ -190,7 +184,6 @@ function becomeEditable(targetf){
         window.location.href = "ProductPage.html";
       }
     }
-    //Will add the desired product defined in add product page in the product list
     function addProductPagef(){
       var nowname = JSON.parse(localStorage.getItem("name"));
       var nowid = JSON.parse(localStorage.getItem("id"));
@@ -236,7 +229,6 @@ function becomeEditable(targetf){
         newrow.childNodes[i].classList.add("ppitems");
       }
     }
-    //Will create a template user row and make it editable for adding users
     function addUser(){
       var usertable = document.getElementById("thebody");
       var row = document.createElement("tr");
@@ -260,7 +252,6 @@ function becomeEditable(targetf){
       usericon.appendChild(icon);
       userBecomeEditable(row);
     }
-    //Will make a user row editable
     function userBecomeEditable(therow){
       var usernamefield = document.createElement("input");
       usernamefield.type = "text";
@@ -298,7 +289,6 @@ function becomeEditable(targetf){
       }
       savebutton.setAttribute("onClick", "javascript: saveUserEdit(this.parentElement.parentElement);");
     }
-    //This function will make sure the entries in the fields are valid for user page
     function saveUserEdit(therow){
       if(therow.cells[1].firstChild.value.search(/[a-zA-z]+/)){
         alert("Invalid Username");
@@ -332,7 +322,44 @@ function becomeEditable(targetf){
         therow.cells[4].appendChild(deletebutton);
       }
     }
-    //Will delete a user row
     function deleteUser(therow){
       therow.remove();
+    }
+    function addOrder(){
+      var tablebody = document.getElementById("OrdersTable");
+      var newrow = document.createElement("tr");
+      var checkboxcol = document.createElement("td");
+      var imgcol = document.createElement("td");
+      var productidcol = document.createElement("td");
+      var productqtycol = document.createElement("td");
+      var DateOrdered = document.createElement("td");
+      var DateRecieved = document.createElement("td");
+      var buttoncol1 = document.createElement("button");
+      var buttonEdit = document.createElement("button");
+      
+      
+      tablebody.appendChild(newrow);
+
+      checkboxcol.appendChild(createElement("input").type("checkbox"));
+      newrow.appendChild(checkboxcol);
+      var img = createElement("img");
+      img.classList.add("pimage");
+      img.src = "images/Orangesm.jpg";
+      imgCol.appendChild(img)
+      newrow.appendChild(imgcol);
+      
+      newrow.appendChild(productidcol);
+      
+      newrow.appendChild(productqtycol);
+      
+      newrow.appendChild(DateOrdered);
+      
+      newrow.appendChild(DateRecieved);
+      
+      newrow.appendChild(buttonEdit);
+      
+      checkboxcol.appendChild(buttoncol1);
+      for(var i = 0; i < 7; i++){
+        newrow.childNodes[i].classList.add("ppitems");
+      }
     }
