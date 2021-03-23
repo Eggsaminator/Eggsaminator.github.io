@@ -2,6 +2,46 @@
     box-sizing: border-box;
 }
 
+.table-small{
+    height:144px;
+    overflow-y: auto;
+    color:black;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:slategray;
+    border: 5px solid black;
+    text-align: center;
+}
+
+.weekly-deals{
+    overflow: auto;
+    width:100%;
+    max-height: 100px;
+    
+}
+
+.weekly-deals img{
+    border-radius: 5px;
+    align-self: center;
+    background-color: rgb(233, 215, 55);
+    padding: 5px;
+}
+
+.divPage {
+    background-color: slategray;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.divTitle {
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    padding-left: 10px;
+    padding-top: 1px;
+    padding-bottom: 10px;
+    background-color: rgb(37, 37, 33);
+    color: rgb(233, 215, 55);
+}
+
 .navbar{
     background: rgb(233, 215, 55);
     color:black;
@@ -13,11 +53,21 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    width: 40%;
+    width: 45%;
     font-family: arial;
 }
 
-
+.back {
+    margin-left: 5%;
+    border: none;
+    width: 60px;
+    height: 40px;
+    background-color: rgb(37, 37, 33);
+    color: rgb(233, 215, 55);
+}
+.back:hover{
+    opacity: 0.7;
+}
 
 .button {
     border: none;
@@ -29,10 +79,12 @@
     cursor: pointer;
     width: 100%;
     font: 18px;
+    border-radius: 5px;
 }
 
 .button1 {
-    background-color: teal;
+    background-color:rgb(233, 215, 55);
+    
 }
 
 .button2 {
@@ -121,6 +173,7 @@ h2 {
     background-color: rgb(25, 35, 50);
     /*font-family: "Comic Sans MS", "Comic Sans", cursive; */
     color:white;
+    padding-bottom: 3%;
 }
 
 .navbar button{
@@ -177,12 +230,10 @@ a {
 }
 
 .footer {
-    clear: both;
-    margin-top: -200px;
-    position: relative;
+    position: fixed;
     bottom:0;
     width: 100%;
-    height:5%;
+    height:3%;
     background-color: rgb(233, 215, 55);
     text-align:center;
     color: black;

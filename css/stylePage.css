@@ -43,6 +43,7 @@
     margin-top: 15px;
     margin-left: 20px;
     margin-right: 20px;
+    width:45px;
     font-family: 'Lucida Grande', Geneva, Verdana, sans-serif;
 }
 div.signup-form {
@@ -60,6 +61,11 @@ div.desc {
     font-size: 110%;
     font-family: 'Lucida Grande', Geneva, Verdana, sans-serif;
 }
+div.subtot{
+    font-family: 'Lucida Sans Regular', Geneva, Verdana, sans-serif;
+    font-size: 80%;
+    padding: 10px;
+}
 div.product {
     margin-left: 10px;
     margin-right: 10px;
@@ -68,7 +74,7 @@ div.product {
     border-bottom: solid;
     border-color: rgb(37, 37, 33);
 }
-div.item {
+div.cart-item {
     padding: 10px;
 }
 div.control {
@@ -80,14 +86,13 @@ div.control {
     /*max-height: 100px;*/
 }
 img.item {
-    max-height: 100px;
-    min-height: 100px;
     border-radius: 5px;
     align-self: center;
+    background-color: rgb(233, 215, 55);
+    padding: 5px;
 }
 body.theme {
     background-color: rgb(25, 35, 50);
-    margin: 10px;
 }
 h3.theme {
     font-family: 'Lucida Sans Regular', Geneva, Verdana, sans-serif;
@@ -127,6 +132,9 @@ a:link {color: rgb(233, 215, 55); text-decoration: none;}
 a:visited {color: rgb(233, 215, 55); text-decoration: none;}
 a:hover {color:rgb(137, 141, 124); text-decoration-line: underline;}
 a:active {text-decoration-color:  rgb(233, 215, 55);}
+a.hover:hover{
+    color: rgb(48, 95, 134);
+}
 a.color {
     color: rgb(25, 35, 50);
 }
