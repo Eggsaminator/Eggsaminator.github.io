@@ -11,36 +11,30 @@
 <link rel="stylesheet" type ="text/css" href="css/stylesheet.css"/>
 <head>
 </head>
-<body class = "backstoreeditpage">
-    <div class = "addcontainer">
-        <a href = "UserList.html"><button type="submit" class = "btn btn-outline-dark sbuttonreturn"><i class = "fa fa-arrow-left"></i></button></a>
-        <h1 class = "productpageh1">Add a new User</h1>
+<body class="">
+    <div class="row content">
+    <div class="container-fluid text-center">
+    <div class="col-sm-2 text-center backendnav" style="margin-top:1.5in; float:left">
+      <p><a href="index.html">Home Page</a></p>
+      <p><a href="ProductPage.html">Product List</a></p>
+      <p><a href="UserList.html">User List</a></p>
+      <p><a href="ordersList.html">Order List</a></p>
     </div>
-    <div class = "productdescription" style="height: 360px;">
-        <br>&emsp;&emsp;
-        <label>Username :  </label>
-        <input class = "rounded slabel2" type = "text" placeholder = " EggTheThird">
-        <br><br><br>
-        &emsp;&emsp;
-        <label >Email :</label>
-        <input class = "rounded slabel3" type = "text" placeholder = " example@examail.exp">
-        <br><br><br>
-        &emsp;&emsp;
-        <label>password :  </label>
-        <input class = "rounded slabel2" type = "text" placeholder = " !#$%(&*">
-        <br><br><br>
-        &emsp;&emsp;
-        <label >verify Password :  </label>
-        <input class = "rounded slabel2" type = "text" placeholder = " !#$%(&*">
-        <br><br><br>
-        </div>
-        </div>
+    <div class="col-sm-7 text-center mt-5" style="float:left;">
+      <div class = "row-6-md" style = "margin-top:3cm; min-width: 20%;">
+          <h1 style="margin-bottom:1.5cm;">Add a new User</h1>
+          <table class="table table-light" id = "AddUserTable">
+              <tbody>
+                <td class="ppitems"><input type = "text" name = "username" id ="username"placeholder = "username" style = "width:70%;"></td>
+                <td class="ppitems"><input type = "text" name = "email" id  = "email" placeholder = "email" style = "width:70%;"></td>
+                <td class="ppitems"><input type = "text" name = "Password" id  = "Password" placeholder = "Password" style = "width:70%;"></td>
+                <td class="ppitems"><input type = "text" name = "verifyPassword" id  = "verifyPassword" placeholder = "verifyPassword" style = "width:70%;"></td>
+                
+              </tr></tbody>
+          </table>
     </div>
-    <br>
-    <div class = "addcontainer" style = "top:200px;display:flex; justify-content: center;">
-        
-            <a href = "UserList.html"><button class = "btn btn-outline-dark sbutton" style = "width:100%">add user</button></a>
-        
+            <button type="submit" class="btn btn-outline-dark sbutton mt-5" onclick = "savePage()" style=" float:right;">Save</button>
     </div>
     </div>
+    <script src = "backend.js"></script>
 </body>

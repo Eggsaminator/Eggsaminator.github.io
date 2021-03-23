@@ -17,8 +17,8 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-  
     <title>Main Page</title>
+</head>
 
 
 <body class="background">
@@ -46,7 +46,11 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="meat_aisle.html">Meat</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="other_aisle.html">Other</a>
+                <a class="dropdown-item" href="other_aisle.html">Alcohol</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="dairy_aisle.html">Dairy & Eggs</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="fish_aisle.html">Fish</a>
               </div>
             </li>
           </ul>
@@ -72,7 +76,7 @@
         </header>
       </div>
       <div >
-        <p class="store-description" style="text-align: center;">Welcome to our store. We have a lot of products available right now. 3 stores currently open. Scroll Down to see our available hours.
+        <p class="store-description" style="text-align: center;">Welcome to our store. We have a lot of products available right now. 3 stores currently open. Scroll down to see our available hours.
         </p>
       </div>
       <br>
@@ -100,71 +104,81 @@
         </div>
       </div>
       <br>
+      <div>
+        <table class="maintable table-striped">
+          <tr>
+            <th colspan="2" class="tb-header">Open Hours</th>
+          </tr>
+          <tr>
+            <td>Monday</td>
+            <td>9:00 am - 4:00 pm</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>9:00 am - 5:00 pm</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>9:00 am - 5:00 pm</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>9:00 am - 5:00 pm</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>9:00 am - 9:00 pm</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>9:00 am - 7:00 pm</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>Closed</td>
+          </tr>
+        </table>
+        <br>
+      <div style="overflow-x: auto;" class="container">
+        <table style="overflow-x: auto;"  class="product-table table-striped">
+          <tr>
+            <th colspan="6" class="tb-header">Weekly Deals</th>
+          </tr>
+          <tr>
+            <td><img src="images/applesm.jpg">
+            <td><a href="apple.html">Apple</a></td>
+            <td style="color: red;"><br><del style="color: black;">$0.86 ea.</del> $0.60 ea.</td>
+            <td><img src="images/tomatosm.jpg"></td>
+            <td>Tomato</td>
+            <td style="color: red;"><br><del style="color:black">$1.32 ea.</del> $1.00 ea.</td>
+          </tr>
+          <tr>
+            <td><img src="images/porksm.jpg"></td>
+            <td><a href="pork.html">Pork Tenderloin</a></td>
+            <td style="color:red"><del style="color:black">$15.41 avg ea.</del> $10.00 avg ea.</td>
+            <td><img src="images/winesm.jpg"></td>
+            <td><a href="wine.html">Wine</a></td>
+            <td style="color:red"><del style="color:black">$30.99 ea.</del> $20.99 ea.</td>
+          </tr>
+          <tr>
+            <td><img src="images/eggsm.jpg"></td>
+            <td><a href="egg.html">Eggs</a></td>
+            <td style="color: red;"><del style="color:black">$3.00 for 6</del> $1.50 for 6</td>
+            <td><img src="images/lobstersm.jpg"></td>
+            <td><a href="lobster.html">Lobster</a></td>
+            <td style="color: red;"><del style="color:black">$12.63 avg ea.</del> $6.00 avg ea.</td>
 
-      <table style="float:left" class="maintable table-striped">
-        <tr>
-          <th colspan="2" class="tb-header">Weekly Deals</th>
-        </tr>
-        <tr>
-          <td>Oranges</td>
-          <td>33% Off</td>
-        </tr>
-        <tr>
-          <td>Wine</td>
-          <td>15% Off</td>
-        </tr>
-        <tr>
-          <td>Beef</td>
-          <td>33% Off</td>
-        </tr>
-        <tr>
-          <td>Apples</td>
-          <td>50% Off</td>
-        </tr>
-        <tr>
-          <td>Alcohol</td>
-          <td>20% Off</i></td>
-        </tr>
-      </table>
-
-      <table style="float:right; " class="maintable table-striped">
-        <tr>
-          <th colspan="2" class="tb-header">Open Hours</th>
-        </tr>
-        <tr>
-          <td>Monday</td>
-          <td>9:00 am - 4:00 pm</td>
-        </tr>
-        <tr>
-          <td>Tuesday</td>
-          <td>9:00 am - 5:00 pm</td>
-        </tr>
-        <tr>
-          <td>Wednesday</td>
-          <td>9:00 am - 5:00 pm</td>
-        </tr>
-        <tr>
-          <td>Thursday</td>
-          <td>9:00 am - 5:00 pm</td>
-        </tr>
-        <tr>
-          <td>Friday</td>
-          <td>9:00 am - 9:00 pm</td>
-        </tr>
-        <tr>
-          <td>Saturday</td>
-          <td>9:00 am - 7:00 pm</td>
-        </tr>
-        <tr>
-          <td>Sunday</td>
-          <td>Closed</td>
-        </tr>
-      </table>
-        <footer class="footer">
-          <a href="Backstoremain.html">
-            About us
+          </tr>
+        </table>
+      </div>
+      
+    </div>
+    <div class="footer">
+          <a href="submitform.html">
+            Contact Us
           </a>
-        </footer>
+    </div>
+
 </body>
 
 </html>

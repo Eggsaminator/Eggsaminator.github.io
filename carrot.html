@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
     <title>Carrot</title>
 </head>
 
@@ -44,7 +45,11 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="meat_aisle.html">Meat</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="other_aisle.html">Other</a>
+                <a class="dropdown-item" href="other_aisle.html">Alcohol</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="dairy_aisle.html">Dairy & Eggs</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="fish_aisle.html">Fish</a>
               </div>
             </li>
           </ul>
@@ -65,14 +70,26 @@
       <div class ="item-description">
         <img src="images/carrot-product.jpg">
         <h1>Carrot</h1>
-        <p class="price">$1.99 avg ea.</p>
-        <p>Aisle: Vegetables<br>In Stock: 4000<br>Sourced from Canadian Farms</p>
-        <button class="button button1">More Description</button>
-        <form class="button">
+        <p class="price">$1.99  ea.</p>
+        <p>Aisle: Vegetables<br>In Stock: 4000<br>Sourced from American Farms</p>
+        <button onclick="moreDesc()" class="button button1">More Description</button>
+        <div id="moreDesc" style="display: none">
+          Farm: Biggie Farm<br>Imported From: Texas, USA <br>Expires: 04/13/21<br>Average Length: 8cm<br>Product Number: 8<br>Organic (Non-GMO)
+          <br>Calories: 90
+        </div>
+        <div class="button">
           <label for="qty">Enter Quantity:</label><br>
-          <input type="number" id="qty" name="qty"><br><br>
-          <input class="button button2" type="submit" value="Add To Cart">
-        </form>
+          <input id="quantity" type="number" value = "0" min="0" max="4000" readonly>
+          <button onclick="decrement(1.99)">-</button>
+          <button onclick="increment(1.99)">+</button>
+          <button style="color: red;" onclick="remove()">X</button>
+          <br><br>  
+          <p>$1.99 ea.</p>
+          <p style="text-decoration: underline;">Subtotal</p>
+          <p id="total">$0.00</p>
+          <br>
+          <button onclick="addToCart('apple(s)')" class="button button2">Add To Cart</button>
+        </div>
       </div>
 </body>
 

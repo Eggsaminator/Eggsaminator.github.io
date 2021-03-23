@@ -11,36 +11,35 @@
 <link rel="stylesheet" type ="text/css" href="css/stylesheet.css"/>
 <head>
 </head>
-<body class = "backstoreeditpage">
-    <div class = "addcontainer">
-        <a href = "ordersList.html"><button type="submit" class = "btn btn-outline-dark sbuttonreturn"><i class = "fa fa-arrow-left"></i></button></a>
-        <h1 class = "productpageh1">pass a new Order</h1>
+<body class="">
+    <div class="row content">
+    <div class="container-fluid text-center">
+    <div class="col-sm-2 text-center backendnav" style="margin-top:1.5in; float:left">
+      <p><a href="index.html">Home Page</a></p>
+      <p><a href="ProductPage.html">Product List</a></p>
+      <p><a href="UserList.html">User List</a></p>
+      <p><a href="ordersList.html">Order List</a></p>
     </div>
-    <div class = "productdescription" style="height: 250px;">
-        <br>&emsp;&emsp;
-        <label>Product ID :  </label>
-        <input class = "rounded slabel2" type = "text" placeholder = " #1">
-        <label style = "margin-left:50px;">Quantity :</label>
-        <input class = "rounded slabel3" type = "text" placeholder = " 0">
-        <br><br><br><br><br>
-        &emsp;&emsp;
-        <label>Source :</label>
-        <select name="shippers" id="shippers">
-            <option value="that old farmer">that old farmer</option>
-            <option value="underpayed third world country">underpayed third world country</option>
-            <option value="my wife can make this">my wife can make this</option>
-            <option value="charlie's chocolate factory">charlie's chocolate factory</option>
-        </select>
-        <label style = "margin-left:50px;">Accelerate shippment?(15% fee) :</label>
-        <input type="checkbox" name="acceleration">
-        <br><br><br>
-        </div>
-        </div>
+    <div class="col-sm-7 text-center mt-5" style="float:left;">
+      <div class = "row-6-md" style = "margin-top:3cm; min-width: 20%;">
+          <h1 style="margin-bottom:1.5cm;">pass a new Order</h1>
+          <table class="table table-light" id = "AddOrderTable">
+              <tbody>
+                <td class="ppitems"><input type = "text" name = "addeditpagetext" placeholder = "Product ID" style = "width:70%;"></td>
+                <td class="ppitems"><input type = "text" name = "addeditpagetext" placeholder = "Quantity " style = "width:70%;"></td>
+                <td class="ppitems"><p>Source : </p><select name="shippers" id="shippers">
+                    <option value="that old farmer">that old farmer</option>
+                    <option value="underpayed third world country">underpayed third world country</option>
+                    <option value="my wife can make this">my wife can make this</option>
+                    <option value="charlie's chocolate factory">charlie's chocolate factory</option>
+                </select></td>
+                <td class="ppitems"><p>Accelerate order ?</p><input type = "checkbox" name = "acceleration" id = "acceleration" ></td>
+                
+              </tr></tbody>
+          </table>
     </div>
-    <div class = "addcontainer" style = "top:70px;">
-        <div style = "width:120%; display:flex; justify-content: flex-end;">
-            <a href = "ordersList.html"><button class = "btn btn-outline-dark sbutton" style = "width:130%">Pass Order</button></a>
-        </div>
+            <button type="submit" class="btn btn-outline-dark sbutton mt-5" onclick = "savePage()" style=" float:right;">Save</button>
     </div>
     </div>
+    <script src = "backend.js"></script>
 </body>

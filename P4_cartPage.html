@@ -4,41 +4,104 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>Store: Shopping Cart</title>
+
+        <!-- font awesome icon library -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/stylePage.css" />
+        <link rel="stylesheet" type="text/css" href="../css/stylePage.css" />
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <script type="text/javaScript" src="../js/cart.js"></script>
     </head>
     <body class="theme">
-        <!--Figure out how to put bootstrap banner, logo, icons and such-->
-        <!--Don't forget to add css style to stuff:)-->
-    <div class="container divPage">        
+        <nav class="navbar navbar-expand-md ">
+            <div class="logo-image">
+              <img src="../images/logo.png" alt="logo">
+            </div>
+              <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+            
+            <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link color hover" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle color hover" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Aisles  
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item color" href="fruit_aisle.html">Fruits</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item color" href="vegetable_aisle.html">Vegetables</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item color" href="meat_aisle.html">Meat</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item color" href="other_aisle.html">Alcohol</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item color" href="dairy_aisle.html">Dairy & Eggs</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item color" href="fish_aisle.html">Fish</a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link color hover" href="P4_cartPage.html">Checkout</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link color hover" href="P5_loginPage.html">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link color hover" href="P6_signupPage.html">Sign Up</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+        <br />
+    <div class="container divPage"> 
         <div class="divTitle">
             <h1>My Shopping Cart <i>(6 items)</i></h1>
             <a href="index.html" target="_self">> Continue Shopping</a>
         </div>
         <div class="row justify-content-around">
-            <div class="col-sm-11 col-lg-8">
-                <div class="container product">
+            <div class="col-sm-11 col-lg-8" id="cart">
+                <div class="container product" id="productTypeFruits">
                     <h3 class="theme">Fruits <i>(2 items)</i></h3>
-                    <div class="row item">
+                    <div class="row cart-item" id="orange">
                         <div class="col-md-3 col-sm-6">
-                            <img class="item" src="images/Orange.jpg" alt="yummy lookin ornge"/>
+                            <img class="item" src="../images/orangesm.jpg" alt="yummy lookin ornge"/>
                         </div>
                         <div class="col-md-3 col-sm-6 align-self-center desc">
                             Orange
-                            <p>$1.44 ea.</p>
+                            <p>$1.49 ea.</p>
                         </div>
                         <div class="col-md-6 align-self-center container">
                             <div class="row">
-                                <button type="button" class="btn btn-dark btn-style">-</button>
-                                <div class="quantity">1</div>
-                                <button type="button" class="btn btn-dark btn-style">+</button>
-                                <button type="button" class="btn btn-dark btn-yeet">Remove</button>
+                                <button type="button" class="btn btn-dark btn-style" id="minusBtn" onclick="decrementCart('orangeQty', 'orange', 'orangeSub', 'orangeRQty', 'orangeRPrice',1.49)">-</button>
+                                <div class="quantity" id="qOrange"><input id="orangeQty" type="number" value = "1" min="0" max="99" readonly></div>
+                                <button type="button" class="btn btn-dark btn-style" id="addBtn" onclick="incrementCart('orangeQty', 'orangeSub', 'orangeRQty', 'orangeRPrice',1.49)">+</button>
+                                <div>
+                                    <div class="subtot" id="orangeSub">Subtotal:<br />$1.49</div>
+                                </div>
+                                <button type="button" class="btn btn-dark btn-yeet" id="removeBtn" onclick="removeFromCart('orange')">Remove</button>
                             </div>
                         </div>
                     </div>
-                    <div class="row item">
+                    <div class="row cart-item" id="kiwi">
                         <div class="col-md-3 col-sm-6">
-                            <img class="item" src="images/Kiwi.jpg" alt="you silly goose you didnt extract the folder"/>
+                            <img class="item" src="../images/Kiwism.jpg" alt="you silly goose you didnt extract the folder"/>
                         </div>
                         <div class="col-md-3 col-sm-6 align-self-center desc">
                             Kiwi
@@ -46,87 +109,102 @@
                         </div>
                         <div class="col-md-6 align-self-center container">
                             <div class="row">
-                                <button type="button" class="btn btn-dark btn-style">-</button>
-                                <div class="quantity">1</div>
-                                <button type="button" class="btn btn-dark btn-style">+</button>
-                                <button type="button" class="btn btn-dark btn-yeet">Remove</button>
+                                <button type="button" class="btn btn-dark btn-style" id="minusBtn" onclick="decrementCart('kiwiQty', 'kiwi', 'kiwiSub', 'kiwiRQty', 'kiwiRPrice',0.99)">-</button>
+                                <div class="quantity" id="qKiwi"><input id="kiwiQty" type="number" value = "1" min="0" max="99" readonly></div>
+                                <button type="button" class="btn btn-dark btn-style" id="addBtn" onclick="incrementCart('kiwiQty', 'kiwiSub', 'kiwiRQty', 'kiwiRPrice',0.99)">+</button>
+                                <div>
+                                    <div class="subtot" id="kiwiSub">Subtotal:<br />$0.99</div>
+                                </div>
+                                <button type="button" class="btn btn-dark btn-yeet" id="removeBtn" onclick="removeFromCart('kiwi')">Remove</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="container product">
+                <div class="container product" id="productTypeVegetables">
                     <h3 class="theme">Vegetables <i>(1 item)</i></h3>
-                    <div class="row item">
+                    <div class="row cart-item" id="broccoli">
                         <div class="col-md-3 col-sm-6">
-                            <img class="item" src="images/Bok Choy.jpg" alt="Its not easy being green"/>
+                            <img class="item" src="../images/Broccolism.jpg" alt="Its not easy being green"/>
                         </div>
                         <div class="col-md-3 col-sm-6 align-self-center desc">
-                            Bok Choy
-                            <p>$2.69 ea.</p>
+                            Broccoli
+                            <p>$3.49 ea.</p>
                         </div>
                         <div class="col-md-6 align-self-center container">
                             <div class="row">
-                                <button type="button" class="btn btn-dark btn-style">-</button>
-                                <div class="quantity">1</div>
-                                <button type="button" class="btn btn-dark btn-style">+</button>
-                                <button type="button" class="btn btn-dark btn-yeet">Remove</button>
+                                <button type="button" class="btn btn-dark btn-style" id="minusBtn" onclick="decrementCart('broccoliQty', 'broccoli', 'broccoliSub', 'broccoliRQty', 'broccoliRPrice',3.49)">-</button>
+                                <div class="quantity" id="qBroccoli"><input id="broccoliQty" type="number" value = "1" min="0" max="99" readonly></div>
+                                <button type="button" class="btn btn-dark btn-style" id="addBtn" onclick="incrementCart('broccoliQty', 'broccoliSub', 'broccoliRQty', 'broccoliRPrice',3.49)">+</button>
+                                <div>
+                                    <div class="subtot" id="broccoliSub">Subtotal:<br />$3.49</div>
+                                </div>
+                                <button type="button" class="btn btn-dark btn-yeet" id="removeBtn" onclick="removeFromCart('broccoli')">Remove</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="container product">
+                <div class="container product" id="productTypeMeat">
                     <h3 class="theme">Meat <i>(1 item)</i></h3>
-                    <div class="row item">
+                    <div class="row cart-item" id="bacon">
                         <div class="col-md-3 col-sm-6">
-                            <img class="item" src="Images_a1/Bacon.jpg" alt="tasty mm mm mmm"/>
+                            <img class="item" src="../images/baconsm.jpg" alt="tasty mm mm mmm"/>
                         </div>
                         <div class="col-md-3 col-sm-6 align-self-center desc">
-                            Thick Cut Bacon
-                            <p>$6.89 ea.</p>
+                            Thick-Cut Bacon
+                            <p>$6.99 ea.</p>
                         </div>
                         <div class="col-md-6 align-self-center container">
                             <div class="row">
-                                <button type="button" class="btn btn-dark btn-style">-</button>
-                                <div class="quantity">1</div>
-                                <button type="button" class="btn btn-dark btn-style">+</button>
-                                <button type="button" class="btn btn-dark btn-yeet">Remove</button>
+                                <button type="button" class="btn btn-dark btn-style" id="minusBtn" onclick="decrementCart('baconQty', 'bacon', 'baconSub', 'baconRQty', 'baconRPrice',6.99)">-</button>
+                                <div class="quantity" id="qBacon"><input id="baconQty" type="number" value = "1" min="0" max="99" readonly></div>
+                                <button type="button" class="btn btn-dark btn-style" id="addBtn" onclick="incrementCart('baconQty', 'baconSub', 'baconRQty', 'baconRPrice',6.99)">+</button>
+                                <div>
+                                    <div class="subtot" id="baconSub">Subtotal:<br />$6.99</div>
+                                </div>
+                                <button type="button" class="btn btn-dark btn-yeet" id="removeBtn" onclick="removeFromCart('bacon')">Remove</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="container product">
-                    <h3 class="theme">Other <i>(2 items)</i></h3>
-                    <div class="row item">
+                <div class="container product" id="productTypeAlcohol">
+                    <h3 class="theme">Alcohol <i>(2 items)</i></h3>
+                    <div class="row cart-item" id="scotch">
                         <div class="col-md-3 col-sm-6">
-                            <img class="item" src="images/Scotch.jpg" alt="happy juice"/>
+                            <img class="item" src="../images/scotchsm.jpg" alt="happy juice"/>
                         </div>
                         <div class="col-md-3 col-sm-6 align-self-center desc">
                             Red Label Scotch
-                            <p>$46.00 ea.</p>
+                            <p>$69.42 ea.</p>
                         </div>
                         <div class="col-md-6 align-self-center container">
                             <div class="row">
-                                <button type="button" class="btn btn-dark btn-style">-</button>
-                                <div class="quantity">1</div>
-                                <button type="button" class="btn btn-dark btn-style">+</button>
-                                <button type="button" class="btn btn-dark btn-yeet">Remove</button>
+                                <button type="button" class="btn btn-dark btn-style" id="minusBtn" onclick="decrementCart('scotchQty', 'scotch', 'scotchSub', 'scotchRQty', 'scotchRPrice',69.42)">-</button>
+                                <div class="quantity" id="qScotch"><input id="scotchQty" type="number" value = "1" min="0" max="99" readonly></div>
+                                <button type="button" class="btn btn-dark btn-style" id="addBtn" onclick="incrementCart('scotchQty', 'scotchSub', 'scotchRQty', 'scotchRPrice',69.42)">+</button>
+                                <div>
+                                    <div class="subtot" id="scotchSub">Subtotal:<br />$69.42</div>
+                                </div>
+                                <button type="button" class="btn btn-dark btn-yeet" id="removeBtn" onclick="removeFromCart('scotch')">Remove</button>
                             </div>
                         </div>
                     </div>
-                    <div class="row item">
+                    <div class="row cart-item" id="champagne">
                         <div class="col-md-3 col-sm-6">
-                            <img class="item" src="images/Corona.jpg" alt="liquid cereal"/>
+                            <img class="item" src="../images/champagnesm.jpg" alt="good for celebrations"/>
                         </div>
                         <div class="col-md-3 col-sm-6 align-self-center desc">
-                            Light Beer
-                            <p>$2.49 ea.</p>
+                            Champagne
+                            <p>$42.69 ea.</p>
                         </div>
                         <div class="col-md-6 align-self-center container">
                             <div class="row">
-                                <button type="button" class="btn btn-dark btn-style">-</button>
-                                <div class="quantity">1</div>
-                                <button type="button" class="btn btn-dark btn-style">+</button>
-                                <button type="button" class="btn btn-dark btn-yeet">Remove</button>
+                                <button type="button" class="btn btn-dark btn-style" id="minusBtn" onclick="decrementCart('champagneQty', 'champagne', 'champagneSub', 'champagneRQty', 'champagneRPrice',42.69)">-</button>
+                                <div class="quantity" id="qChampagne"><input id="champagneQty" type="number" value = "1" min="0" max="99" readonly></div>
+                                <button type="button" class="btn btn-dark btn-style" id="addBtn" onclick="incrementCart('champagneQty', 'champagneSub', 'champagneRQty', 'champagneRPrice',42.69)">+</button>
+                                <div>
+                                    <div class="subtot" id="champagneSub">Subtotal:<br />$42.69</div>
+                                </div>
+                                <button type="button" class="btn btn-dark btn-yeet" id="removeBtn" onclick="removeFromCart('champagne')">Remove</button>
                             </div>
                         </div>
                     </div>
@@ -143,90 +221,90 @@
                             <h6 class="receipt">Price:</h6>
                         </div>
                     </div>
-                    <div class="row receipt-item">
+                    <div class="row receipt-item" id="orangeR">
                         <div class="col-8">
-                            Orange (1)
+                            Orange <p id="orangeRQty">(1)</p>
                         </div>
-                        <div class="col-4">
-                            $1.44
+                        <div class="col-4" id="orangeRPrice">
+                            $1.49
                         </div>
                     </div>
-                    <div class="row receipt-item">
+                    <div class="row receipt-item" id="kiwiR">
                         <div class="col-8">
-                            Kiwi (1)
+                            Kiwi <p id="kiwiRQty">(1)</p>
                         </div>
-                        <div class="col-4">
+                        <div class="col-4" id="kiwiRPrice">
                             $0.99
                         </div>
                     </div>
-                    <div class="row receipt-item">
+                    <div class="row receipt-item" id="broccoliR">
                         <div class="col-8">
-                            Bok Choy (1)
+                            Broccoli <p id="broccoliRQty">(1)</p>
                         </div>
-                        <div class="col-4">
-                            $2.69
+                        <div class="col-4" id="broccoliRPrice">
+                            $3.49
                         </div>
                     </div>
-                    <div class="row receipt-item">
+                    <div class="row receipt-item" id="baconR">
                         <div class="col-8">
-                            Thick Cut Bacon (1)
+                            Thick-Cut Bacon <p id="baconRQty">(1)</p>
                         </div>
-                        <div class="col-4">
-                            $6.89
+                        <div class="col-4" id="baconRPrice">
+                            $6.99
                         </div>
                     </div>
-                    <div class="row receipt-item">
+                    <div class="row receipt-item" id="scotchR">
                         <div class="col-8">
-                            Red Label Scotch (1)
+                            Red Label Scotch <p id="scotchRQty">(1)</p>
                         </div>
-                        <div class="col-4">
-                            $46.00
+                        <div class="col-4" id="scotchRPrice">
+                            $69.42
                         </div>
                     </div>
-                    <div class="row receipt-item">
+                    <div class="row receipt-item" id="champagneR">
                         <div class="col-8">
-                            Light Beer (1)
+                            Champagne <p id="champagneRQty">(1)</p>
                         </div>
-                        <div class="col-4">
-                            $2.49
+                        <div class="col-4" id="champagneRPrice">
+                            $42.69
                         </div>
                     </div>
                     <div class="row receipt-closer">
                         <div class="col-8">
                             Subtotal
                         </div>
-                        <div class="col-4">
-                            $60.50
+                        <div class="col-4" id="subtotal">
+                            $125.07
                         </div>
                     </div>
                     <div class="row receipt-item">
                         <div class="col-8">
                             GST
                         </div>
-                        <div class="col-4">
-                            $3.02
+                        <div class="col-4" id="gst">
+                            $6.25
                         </div>
                     </div>
                     <div class="row receipt-item">
                         <div class="col-8">
                             QST
                         </div>
-                        <div class="col-4">
-                            $5.90
+                        <div class="col-4" id="qst">
+                            $12.48
                         </div>
                     </div>
                     <div class="row receipt-closer">
                         <div class="col-8">
                             Total
                         </div>
-                        <div class="col-4">
-                            $69.42
+                        <div class="col-4" id="total">
+                            $143.80
                         </div>
                     </div>
                 </div>
                 <div class="container">
                     <div class="row justify-content-center">
-                        <button type="button" class="btn btn-dark btn-clear">Empty your Cart</button>
+                        <button type="button" class="btn btn-dark btn-clear" id="reload" onclick="reload()">Reload receipt total</button>
                     </div>
                     <div class="row justify-content-center">
                         <a class="btn btn-dark btn-continue color" href="index.html" role="button">Continue Shopping</a>

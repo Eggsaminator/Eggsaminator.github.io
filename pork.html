@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
     <title>Pork Tenderloin</title>
 </head>
 
@@ -44,7 +45,11 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="meat_aisle.html">Meat</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="other_aisle.html">Other</a>
+                <a class="dropdown-item" href="other_aisle.html">Alcohol</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="dairy_aisle.html">Dairy & Eggs</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="fish_aisle.html">Fish</a>
               </div>
             </li>
           </ul>
@@ -65,14 +70,27 @@
       <div class ="item-description">
         <img src="images/pork-product.jpg">
         <h1>Pork Tenderloin</h1>
-        <p class="price">$15.41 avg ea.</p>
+        <h3 style="color: red;">Weekly Deal</h3>
+        <p class="price"><del style="color: black;">$15.41 avg ea.</del> $10.00 ea.</p>
         <p>Aisle: Meat<br>In Stock: 3<br>Pork<br> Sourced locally</p>
-        <button class="button button1">More Description</button>
-        <form class="button">
+        <button onclick="moreDesc()" class="button button1">More Description</button>
+        <div id="moreDesc" style="display: none">
+          Farm: Animal Farm<br>Imported From: Laval, Quebec<br>Expires: 03/20/21<br>Average Size: 15cm<br>Product Number: 10<br>From animals fed with supplements
+          <br>Keep Refrigerated<br>Calories: 800
+        </div>
+        <div class="button">
           <label for="qty">Enter Quantity:</label><br>
-          <input type="number" id="qty" name="qty"><br><br>
-          <input class="button button2" type="submit" value="Add To Cart">
-        </form>
+          <input id="quantity" type="number" value = "0" min="0" max="3" readonly>
+          <button onclick="decrement(10.00)">-</button>
+          <button onclick="increment(10.00)">+</button>
+          <button style="color: red;" onclick="remove()">X</button>
+          <br><br>  
+          <p>$10.00 ea.</p>
+          <p style="text-decoration: underline;">Total</p>
+          <p id="total">$0.00</p>
+          <br>
+          <button onclick="addToCart('pork slice(s)')" class="button button2">Add To Cart</button>
+        </div>
       </div>
 </body>
 

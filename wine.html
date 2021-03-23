@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
     <title>Wine</title>
 </head>
 
@@ -44,7 +45,11 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="meat_aisle.html">Meat</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="other_aisle.html">Other</a>
+                <a class="dropdown-item" href="other_aisle.html">Alcohol</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="dairy_aisle.html">Dairy & Eggs</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="fish_aisle.html">Fish</a>
               </div>
             </li>
           </ul>
@@ -65,14 +70,27 @@
       <div class ="item-description">
         <img src="images/wine-product.jpg">
         <h1>Wine</h1>
-        <p class="price">$30.99 avg ea.</p>
-        <p>Aisle: Other<br>In Stock: 420<br>Aged Wine<br>Made in Canada<br>Currently on sale (20% off)</p>
-        <button class="button button1">More Description</button>
-        <form class="button">
+        <h3 style="color: red;">Weekly Deal</h3>
+        <p class="price"><del style="color: black;">$30.99 avg ea.</del> $20.99 ea.</p>
+        <p>Aisle: Alcohol<br>In Stock: 420<br>Aged Wine<br>Made in Canada<br>Currently on sale<br>Flavour: Limestone Coast</p>
+        <button onclick="moreDesc()" class="button button1">More Description</button>
+        <div id="moreDesc" style="display: none">
+          Company: Jacob's Creek<br>Imported From: Montreal, Quebec<br>Expires: 02/03/24<br>Amount:2L<br>Product Number: 12<br>Aging: 5 years
+          <br>Calories: 150
+        </div>
+        <div class="button">
           <label for="qty">Enter Quantity:</label><br>
-          <input type="number" id="qty" name="qty"><br><br>
-          <input class="button button2" type="submit" value="Add To Cart">
-        </form>
+          <input id="quantity" type="number" value = "0" min="0" max="420" readonly>
+          <button onclick="decrement(20.99)">-</button>
+          <button onclick="increment(20.99)">+</button>
+          <button style="color: red;" onclick="remove()">X</button>
+          <br><br>  
+          <p>$20.99 ea.</p>
+          <p style="text-decoration: underline;">Total</p>
+          <p id="total">$0.00</p>
+          <br>
+          <button onclick="addToCart('wine bottle(s)')" class="button button2">Add To Cart</button>
+        </div>
       </div>
 </body>
 

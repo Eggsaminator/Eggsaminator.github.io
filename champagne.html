@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
     <title>Champagne</title>
 </head>
 
@@ -44,7 +45,11 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="meat_aisle.html">Meat</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="other_aisle.html">Other</a>
+                <a class="dropdown-item" href="other_aisle.html">Alcohol</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="dairy_aisle.html">Dairy & Eggs</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="fish_aisle.html">Fish</a>
               </div>
             </li>
           </ul>
@@ -65,14 +70,26 @@
       <div class ="item-description">
         <img src="images/champagne-product.jpg">
         <h1>Champagne</h1>
-        <p class="price">$42.69 avg ea.</p>
-        <p>Aisle: Other<br>In Stock: 79<br>Sparkling wine<br>2 for 90.00$</p>
-        <button class="button button1">More Description</button>
-        <form class="button">
+        <p class="price">$42.69 ea.</p>
+        <p>Aisle: Alcohol<br>In Stock: 79<br>Sparkling wine<br>1 Litre Bottle</p>
+        <button onclick="moreDesc()" class="button button1">More Description</button>
+        <div id="moreDesc" style="display: none">
+          Company: Moet & Chandon<br>Imported From: Epernay, France<br>Expires: 01/04/25<br>Amount:1L<br>Product Number: 11<br>Aging: 15 months
+          <br>Calories: 200
+        </div>
+        <div class="button">
           <label for="qty">Enter Quantity:</label><br>
-          <input type="number" id="qty" name="qty"><br><br>
-          <input class="button button2" type="submit" value="Add To Cart">
-        </form>
+          <input id="quantity" type="number" value = "0" min="0" max="79" readonly>
+          <button onclick="decrement(42.69)">-</button>
+          <button onclick="increment(42.69)">+</button>
+          <button style="color: red;" onclick="remove()">X</button>
+          <br><br>  
+          <p>$42.69 ea.</p>
+          <p style="text-decoration: underline;">Subtotal</p>
+          <p id="total">$0.00</p>
+          <br>
+          <button onclick="addToCart('champagne bottle(s)')" class="button button2">Add To Cart</button>
+        </div>
       </div>
 </body>
 

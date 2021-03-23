@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript"> document.addEventListener('click', function(e) { if(document.activeElement.toString() == '[object HTMLButtonElement]'){ document.activeElement.blur(); } }); </script>  
+<script type="text/javascript" src="backend.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -29,7 +30,8 @@
                         <button type="submit" class = "btn btn-outline-dark sbutton">Search</button>&emsp;<input type="text" placeholder=" Search for products" class = "rounded slabel">
                     </th>
                     <th class = "removeline">
-                      <a href = "addOrder.html"><button type="submit" class = "btn btn-outline-dark sbutton" style = " float:right; width:160px;">pass a new order</button></a>
+                      <a href = "addOrder.html"><button type="submit" class = "btn btn-outline-dark sbutton" style = " float:right; width:160px;">pass order(page)</button></a>
+                      <button type="submit" onclick="addOrder()" class = "btn btn-outline-dark sbutton" style = " float:right; width:160px;">pass order(add)</button>
                     </th>
                     <th class = "removeline">
                         <button type="submit" class = "btn btn-outline-dark sbutton" style = "float:right;">Delete</button>
@@ -37,7 +39,7 @@
                 </thead>
             </table>
             <table id="Tables"class="table table-light table-hover pptable1">
-                <tbody>
+                <tbody id="OrdersTable">
                   <tr class = "antihover">
                     <th class = "ppitemsh" style = "width:135px;"><input type="checkbox"></th>
                     <th class = "ppitemsh" style = "width:200px;"></th>

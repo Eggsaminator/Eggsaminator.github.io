@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- font awesome icon library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>Submit a Form</title>
+</head>
+
+
+<body class="background">
+    <nav class="navbar navbar-expand-md ">
+      <div class="logo-image">
+        <img src="images/logo.png" alt="logo">
+      </div>
+        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Aisles  
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="fruit_aisle.html">Fruits</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="vegetable_aisle.html">Vegetables</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="meat_aisle.html">Meat</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="other_aisle.html">Alcohol</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="dairy_aisle.html">Dairy & Eggs</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="fish_aisle.html">Fish</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="P4_cartPage.html">Checkout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="P5_loginPage.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="P6_signupPage.html">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+      <div class="container divPage">
+        <div class="divTitle">
+          <h1>Submit A Form</h1>
+          <p>Fill out the following form if you have any questions with one of your orders:</p>
+          <a style="color:rgb(233, 215, 55)" href="index.html">> Continue Shopping</a>
+        </div>
+        <div class="row justify-content-around">
+          <div class="col-11 submit-form">
+            <form> 
+              <div class="form-group">
+                <label for="userName">Username</label>
+                <input type="text" class="form-control" id="userName" placeholder="Username">
+              </div>
+              <div class="form-group">
+                <label for="itemName">Item Name</label>
+                <input type="text" class="form-control" id="itemName" placeholder="Item Name">
+              </div>
+              <div class="form-group">
+                <label for="orderNumber">Order Number (ex. #12345AB)</label>
+                <input type="text" class="form-control" id="orderNumber" placeholder="Order Number">
+              </div>
+              <div class="form-group">
+                <label for="questions">Questions</label>
+                <br>
+                <textarea class="form-group" style="width: 100%;" rows="3" id="questions"></textarea>
+              </div>
+              <button type="submit" onclick=checkForm() class="btn btn-dark">Submit</button>
+              <button type="reset" class="btn btn-dark">Reset</button>
+            </form>
+            </div>
+        </div>
+      </div>
+</body>
+
+</html>
