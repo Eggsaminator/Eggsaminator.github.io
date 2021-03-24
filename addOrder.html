@@ -25,8 +25,8 @@
           <h1 style="margin-bottom:1.5cm;">pass a new Order</h1>
           <table class="table table-light" id = "AddOrderTable">
               <tbody>
-                <td class="ppitems"><input type = "text" name = "addeditpagetext" placeholder = "Product ID" style = "width:70%;"></td>
-                <td class="ppitems"><input type = "text" name = "addeditpagetext" placeholder = "Quantity " style = "width:70%;"></td>
+                <td class="ppitems"><input id = "ID" type = "text" name = "addeditpagetext" placeholder = "Product ID" style = "width:70%;"></td>
+                <td class="ppitems"><input id = "qty" type = "text" name = "addeditpagetext" placeholder = "Quantity " style = "width:70%;"></td>
                 <td class="ppitems"><p>Source : </p><select name="shippers" id="shippers">
                     <option value="that old farmer">that old farmer</option>
                     <option value="underpayed third world country">underpayed third world country</option>
@@ -38,7 +38,7 @@
               </tr></tbody>
           </table>
     </div>
-            <button type="submit" class="btn btn-outline-dark sbutton mt-5" onclick = "savePage()" style=" float:right;">Save</button>
+            <button type="submit" class="btn btn-outline-dark sbutton mt-5" onclick = "saveOrderPage()" style=" float:right;">Save</button>
     </div>
     </div>
     <script src = "backend.js"></script>

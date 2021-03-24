@@ -304,13 +304,13 @@ function becomeEditable(targetf){
         editbutton.classList.add("btn-outline-dark");
         editbutton.classList.add("sbutton");
         editbutton.innerHTML = "Edit";
-        editbutton.setAttribute("onClick", "javascript: userBecomeEditable(this.parentElement.parentElement);")
+        editbutton.setAttribute("onClick", "javascript: userBecomeEditable(this.parentElement.parentElement);");
         deletebutton.classList.add("btn");
         deletebutton.classList.add("btn-outline-dark");
         deletebutton.classList.add("sbutton");
         deletebutton.innerHTML = "Delete";
         deletebutton.type = "button";
-        deletebutton.setAttribute("onClick", "javascript: deleteUser(this.parentElement.parentElement);")
+        deletebutton.setAttribute("onClick", "javascript: deleteUser(this.parentElement.parentElement);");
         var username = therow.cells[1].firstChild.value;
         var email = therow.cells[2].firstChild.value;
         therow.cells[1].firstChild.remove();
@@ -327,25 +327,48 @@ function becomeEditable(targetf){
     }
     function addOrder(){
       var tablebody = document.getElementById("OrdersTable");
-      var newrow = document.createElement("tr");
-      var checkboxcol = document.createElement("td");
-      var imgcol = document.createElement("td");
-      var productidcol = document.createElement("td");
-      var productqtycol = document.createElement("td");
-      var DateOrdered = document.createElement("td");
-      var DateRecieved = document.createElement("td");
-      var buttoncol1 = document.createElement("button");
-      var buttonEdit = document.createElement("button");
       
+      var newrow = document.createElement("tr");
+      
+      var checkboxcol = document.createElement("td");
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.name = "checkb";
+      
+      var imgcol = document.createElement("td");
+      var img = document.createElement("img");
+      img.classList.add("pimage");
+      img.src = "images/orangesm.jpg";
+      
+      var productidcol = document.createElement("td");
+      productidcol.id ="ID";
+      
+      var productqtycol = document.createElement("td");
+      productqtycol.id = "qty";
+      
+      var DateOrdered = document.createElement("td");
+      
+      var DateRecieved = document.createElement("td");
+      
+      var buttoncol1 = document.createElement("td");
+      
+      var buttonEdit = document.createElement("button");
+      buttonEdit.type = "submit";
+      buttonEdit.classList.add("btn");
+      buttonEdit.classList.add("btn-outline-dark");
+      buttonEdit.classList.add("sbutton");
+      buttonEdit.textContent = "Edit";
+      buttonEdit.setAttribute("onClick", "javascript: becomeEditableOrder(this.parentElement.parentElement);")
+
       
       tablebody.appendChild(newrow);
 
-      checkboxcol.appendChild(createElement("input").type("checkbox"));
       newrow.appendChild(checkboxcol);
-      var img = createElement("img");
-      img.classList.add("pimage");
-      img.src = "images/Orangesm.jpg";
-      imgCol.appendChild(img)
+      
+      checkboxcol.appendChild(checkbox);
+
+      imgcol.appendChild(img);
+      
       newrow.appendChild(imgcol);
       
       newrow.appendChild(productidcol);
@@ -356,10 +379,179 @@ function becomeEditable(targetf){
       
       newrow.appendChild(DateRecieved);
       
-      newrow.appendChild(buttonEdit);
+      newrow.appendChild(buttoncol1);
       
-      checkboxcol.appendChild(buttoncol1);
-      for(var i = 0; i < 7; i++){
+      buttoncol1.appendChild(buttonEdit)
+      // checkboxcol.appendChild();
+      for(var i = 0; i < newrow.childNodes.length; i++){
         newrow.childNodes[i].classList.add("ppitems");
+      }
+      console.log(newrow);
+      becomeEditableOrder(newrow);
+      var date = new Date();
+      var dateString = "" + date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear();
+      DateOrdered.innerHTML = dateString;
+
+      DateRecieved.innerHTML = "Not arrived yet"; 
+    }
+
+    function becomeEditableOrder(targetf){
+      var target = targetf;
+      var savebutton = document.createElement("button");
+      savebutton.classList.add("btn");
+      savebutton.classList.add("btn-outline-dark");
+      savebutton.classList.add("sbutton");
+      savebutton.innerHTML = "Save";
+      var idToOrder = document.createElement("input");
+      idToOrder.type = "text";
+      if(target.cells[2].innerHTML == ""){
+        idToOrder.placeholder = "ID";
+        }
+      else{
+        idToOrder.value = target.cells[2].innerHTML;
+        }
+        idToOrder.style.width = "75px";
+        
+        
+        var quantityToOrder = document.createElement("input")
+        quantityToOrder.type = "text";
+      if(target.cells[3].innerHTML == ""){
+        quantityToOrder.placeholder = "quantity";
+        }
+      else{
+        quantityToOrder.value = target.cells[3].innerHTML;
+        }
+        quantityToOrder.style.width = "75px";
+
+        target.cells[2].innerHTML = "";
+        target.cells[3].innerHTML = "";
+        var tempEditButton = target.cells[6].firstChild;
+        target.cells[6].firstChild.remove();
+        target.cells[6].appendChild(savebutton);
+        target.cells[2].appendChild(idToOrder);
+        target.cells[3].appendChild(quantityToOrder);
+        savebutton.onclick = function (){
+          if(this.parentElement.parentElement.cells[2].firstChild.value.search(/[0-9]+/)){
+            alert("Invalid Product ID");
+          }
+          else if(this.parentElement.parentElement.cells[3].firstChild.value.search(/[0-9]+/)){
+            
+            alert("Invalid Quantity");
+          }
+          else{
+
+            target.cells[2].innerHTML = target.cells[2].firstChild.value;
+            target.cells[3].innerHTML = target.cells[3].firstChild.value;
+
+
+            target.cells[6].firstChild.remove();
+            target.cells[6].appendChild(tempEditButton);
+
+          }
+        }
+      }
+
+      function saveOrderPage(){
+        var idContent = document.getElementById("ID").value;
+        var qtyContent = document.getElementById("qty").value;
+        if(idContent.search(/[0-9]+/)){// "\\D" doesnt check for empty field
+          alert("Invalid Product ID");
+        }
+        else if(idContent.search(/[0-9]+/)){
+          
+          alert("Invalid Quantity");
+        }
+        else{
+        console.log(idContent);
+        console.log(qtyContent);
+        orderNumber = parseInt(JSON.parse(localStorage.getItem("ordersAdded"))) + 1;
+        localStorage.setItem("id" + orderNumber,JSON.stringify(idContent));
+        localStorage.setItem("qty" + orderNumber,JSON.stringify(qtyContent));
+        
+        window.location.href = "ordersList.html"
+        
+        }
+      }
+      function generateOrders(){
+
+        if(parseInt(JSON.parse(localStorage.getItem("ordersAdded"))) == 0){
+          console.log("nothing to add");      
+          return;
+        }
+        console.log("there are things to add");
+        console.log(localStorage.getItem("ordersAdded"));
+        console.log(JSON.parse(localStorage.getItem("ordersAdded")));
+        console.log(parseInt(JSON.parse(localStorage.getItem("ordersAdded"))));
+
+        var tablebody = document.getElementById("OrdersTable");
+        
+        for(var i = 1; i<= parseInt(JSON.parse(localStorage.getItem("ordersAdded")));i++ ){
+
+        var newrow = document.createElement("tr");
+        
+        var checkboxcol = document.createElement("td");
+        var checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.name = "checkb";
+        
+        var imgcol = document.createElement("td");
+        var img = document.createElement("img");
+        img.classList.add("pimage");
+        img.src = "images/orangesm.jpg";
+        
+        var productidcol = document.createElement("td");
+        productidcol.id ="ID";
+        
+        var productqtycol = document.createElement("td");
+        productqtycol.id = "qty";
+        
+        var DateOrdered = document.createElement("td");
+        
+        var DateRecieved = document.createElement("td");
+        
+        var buttoncol1 = document.createElement("td");
+        
+        var buttonEdit = document.createElement("button");
+        buttonEdit.type = "submit";
+        buttonEdit.classList.add("btn");
+        buttonEdit.classList.add("btn-outline-dark");
+        buttonEdit.classList.add("sbutton");
+        buttonEdit.textContent = "Edit";
+        buttonEdit.setAttribute("onClick", "javascript: becomeEditableOrder(this.parentElement.parentElement);")
+
+        
+        tablebody.appendChild(newrow);
+
+        newrow.appendChild(checkboxcol);
+        
+        checkboxcol.appendChild(checkbox);
+
+        imgcol.appendChild(img);
+        
+        newrow.appendChild(imgcol);
+        
+        newrow.appendChild(productidcol);
+        
+        newrow.appendChild(productqtycol);
+        
+        newrow.appendChild(DateOrdered);
+        
+        newrow.appendChild(DateRecieved);
+        
+        newrow.appendChild(buttoncol1);
+        
+        buttoncol1.appendChild(buttonEdit)
+
+        for(var i = 0; i < newrow.childNodes.length; i++){
+          newrow.childNodes[i].classList.add("ppitems");
+        }
+        productidcol.textContent = localStorage.getItem("id"+i);
+        productqtycol.textContent = qtyContent.getItem("qty"+i);
+
+        var date = new Date();
+        var dateString = "" + date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear();
+        DateOrdered.innerHTML = dateString;
+
+        DateRecieved.innerHTML = "Not arrived yet"; 
       }
     }

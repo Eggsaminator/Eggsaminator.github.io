@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript"> document.addEventListener('click', function(e) { if(document.activeElement.toString() == '[object HTMLButtonElement]'){ document.activeElement.blur(); } }); </script>  
+<script type="text/javascript"> if(localStorage.getItem("ordersAdded")== null){console.log("setting up");localStorage.setItem("ordersAdded", "0")}</script>
 <script type="text/javascript" src="backend.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -34,7 +35,7 @@
                       <button type="submit" onclick="addOrder()" class = "btn btn-outline-dark sbutton" style = " float:right; width:160px;">pass order(add)</button>
                     </th>
                     <th class = "removeline">
-                        <button type="submit" class = "btn btn-outline-dark sbutton" style = "float:right;">Delete</button>
+                        <button type="submit" onclick="devareItem()" class = "btn btn-outline-dark sbutton" style = "float:right;">Delete</button>
                     </th>
                 </thead>
             </table>
@@ -50,44 +51,45 @@
                     <th class = "ppitemsh" style = "width:165px;"></th>
                   </tr>
                   <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
+                    <td class ="ppitems"><input type="checkbox" name = "checkb"></td>
                     <td class ="ppitems"><img class = "pimage" src="images/applesm.jpg"></td>
-                    <td class ="ppitems">3</td>
-                    <td class ="ppitems">1337</td>
+                    <td class ="ppitems" id="ID">3</td>
+                    <td class ="ppitems" id="qty">1337</td>
                     <td class ="ppitems">19/01/2005</td>
                     <td class ="ppitems">21/05/2011</td>
-                    <td class ="ppitems"><a href = "editOrder.html">Edit</a></td>
+                    <td class="ppitems"><button type = "submit" onclick = "becomeEditableOrder(this.parentElement.parentElement)" class="btn btn-outline-dark sbutton">Edit</button></td>
                   </tr>
                   <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
+                    <td class ="ppitems"><input type="checkbox" name = "checkb"></td>
                     <td class ="ppitems"><img class = "pimage" src="images/Orangesm.jpg"></td>
-                    <td class ="ppitems">1</td>
-                    <td class ="ppitems">895</td>
+                    <td class ="ppitems" id="ID">1</td>
+                    <td class ="ppitems" id="qty">895</td>
                     <td class ="ppitems">19/01/2015</td>
                     <td class ="ppitems">21/05/2012</td>
-                    <td class ="ppitems"><a href = "editOrder.html">Edit</a></td>
+                    <td class="ppitems"><button type = "submit" onclick = "becomeEditableOrder(this.parentElement.parentElement)" class="btn btn-outline-dark sbutton">Edit</button></td>
                   </tr>
                   <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
+                    <td class ="ppitems"><input type="checkbox" name = "checkb"></td>
                     <td class ="ppitems"><img class = "pimage" src="images/beefsm.jpg"></td>
-                    <td class ="ppitems">9</td>
-                    <td class ="ppitems">1337</td>
+                    <td class ="ppitems" id="ID">9</td>
+                    <td class ="ppitems" id="qty">1337</td>
                     <td class ="ppitems">19/12/2019</td>
                     <td class ="ppitems">18/01/2020</td>
-                    <td class ="ppitems"><a href = "editOrder.html">Edit</a></td>
+                    <td class="ppitems"><button type = "submit" onclick = "becomeEditableOrder(this.parentElement.parentElement)" class="btn btn-outline-dark sbutton">Edit</button></td>
                   </tr>
                   <tr>
-                    <td class ="ppitems"><input type="checkbox"></td>
-                    <td class ="ppitems"><img class = "pimage" src="images/coronasm.jpg"></td>
-                    <td class ="ppitems">13</td>
-                    <td class ="ppitems">1337</td>
-                    <td class ="ppitems">31/02/2021</td>
+                    <td class ="ppitems"><input type="checkbox" name = "checkb"></td>
+                    <td class ="ppitems"><img class = "pimage" src="images/eggsm.jpg"></td>
+                    <td class ="ppitems" id="ID">13</td>
+                    <td class ="ppitems" id="qty">134564337</td>
+                    <td class ="ppitems">31/12/2021</td>
                     <td class ="ppitems">Not arrived yet</td> 
-                    <td class ="ppitems"><a href = "editOrder.html">Edit</a></td>
+                    <td class="ppitems"><button type = "submit" onclick = "becomeEditableOrder(this.parentElement.parentElement)" class="btn btn-outline-dark sbutton">Edit</button></td>
                   </tr>
 
                 </tbody>
               </table>
               </div>
             </div>
+            <script type = "text/javascript"> generateOrders();</script>
     </body>
